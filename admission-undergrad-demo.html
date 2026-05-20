@@ -1,0 +1,712 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>東吳經濟學系｜學士班招生資訊範例</title>
+  <style>
+    :root {
+      --ink: #18202f;
+      --muted: #667085;
+      --line: #d9dee8;
+      --paper: #ffffff;
+      --soft: #f6f8fb;
+      --brand: #1c3b7f;
+      --brand-dark: #142c61;
+      --brand-deep: #0b1835;
+      --link: #105389;
+      --gold: #b88a3d;
+      --blue: #105389;
+      --green: #4f7f74;
+      --teal: #2f758a;
+      --shadow: 0 16px 38px rgba(24, 32, 47, .1);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--soft);
+      font-family: "Noto Sans TC", "Microsoft JhengHei", system-ui, sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .topbar {
+      background: var(--brand);
+      color: #fff;
+    }
+
+    .topbar-inner {
+      width: min(1160px, calc(100% - 40px));
+      min-height: 64px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      border: 2px solid rgba(255, 255, 255, .84);
+      display: grid;
+      place-items: center;
+      font-size: 14px;
+    }
+
+    .nav {
+      display: flex;
+      gap: 18px;
+      color: rgba(255, 255, 255, .82);
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    .hero {
+      color: #fff;
+      background:
+        linear-gradient(90deg, rgba(11, 24, 53, .94), rgba(28, 59, 127, .82)),
+        url("https://www.scu.edu.tw/econ/images/top/main-img02.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero-inner {
+      width: min(1160px, calc(100% - 40px));
+      min-height: 420px;
+      margin: 0 auto;
+      padding: 58px 0 88px;
+      display: grid;
+      align-content: center;
+    }
+
+    .crumb {
+      color: rgba(255, 255, 255, .76);
+      font-size: 14px;
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 760px;
+      font-size: clamp(36px, 5vw, 64px);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    .hero p {
+      max-width: 680px;
+      margin: 18px 0 0;
+      color: rgba(255, 255, 255, .9);
+      font-size: 19px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .btn {
+      min-height: 44px;
+      padding: 0 18px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(255, 255, 255, .48);
+      text-decoration: none;
+      font-weight: 900;
+      background: #fff;
+      color: var(--brand);
+    }
+
+    .btn.secondary {
+      background: transparent;
+      color: #fff;
+    }
+
+    main {
+      width: min(1160px, calc(100% - 40px));
+      margin: -46px auto 76px;
+    }
+
+    .card,
+    .section,
+    .cta {
+      background: var(--paper);
+      border: 1px solid var(--line);
+    }
+
+    .notice {
+      box-shadow: var(--shadow);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 20px;
+      padding: 24px;
+      background: #fbf4e8;
+      border: 1px solid #ead8b9;
+    }
+
+    .notice h2 {
+      margin: 0;
+      font-size: 25px;
+      letter-spacing: 0;
+    }
+
+    .notice p {
+      margin: 6px 0 0;
+      color: #765018;
+    }
+
+    .notice .btn {
+      border-color: var(--brand);
+      background: var(--brand);
+      color: #fff;
+      white-space: nowrap;
+    }
+
+    .section {
+      margin-top: 28px;
+      padding: 26px;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 18px;
+    }
+
+    .section-head h2 {
+      margin: 0;
+      font-size: 26px;
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .audience-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .quota-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .quota {
+      border: 1px solid #e7ebf2;
+      background: #fbfcfe;
+      padding: 20px;
+      min-height: 150px;
+    }
+
+    .quota strong {
+      display: block;
+      color: var(--link);
+      font-size: 44px;
+      line-height: 1;
+    }
+
+    .quota h3 {
+      margin: 12px 0 6px;
+      font-size: 21px;
+      letter-spacing: 0;
+    }
+
+    .quota p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .quota .link-row {
+      margin-top: 14px;
+    }
+
+    .subjects {
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid #e7ebf2;
+      color: #344054;
+      font-size: 14px;
+    }
+
+    .subjects b {
+      color: var(--brand);
+      font-weight: 900;
+    }
+
+    .card {
+      padding: 22px;
+      min-height: 220px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto;
+      height: 5px;
+      background: var(--blue);
+    }
+
+    .card.transfer::before {
+      background: var(--brand);
+    }
+
+    .card.other::before {
+      background: var(--green);
+    }
+
+    .card h3 {
+      margin: 0;
+      font-size: 22px;
+      letter-spacing: 0;
+    }
+
+    .card p {
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .link-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 18px;
+    }
+
+    .pill {
+      min-height: 30px;
+      padding: 0 10px;
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid #e3e8f0;
+      background: #f8fafc;
+      color: #475467;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .why {
+      padding: 18px;
+      border: 1px solid #e7ebf2;
+      background: #fbfcfe;
+      min-height: 174px;
+    }
+
+    .why .number {
+      color: var(--link);
+      font-size: 14px;
+      font-weight: 900;
+    }
+
+    .why strong {
+      display: block;
+      margin-top: 8px;
+      font-size: 18px;
+      line-height: 1.35;
+    }
+
+    .why p {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .transfer-table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+      font-size: 16px;
+    }
+
+    .transfer-table th,
+    .transfer-table td {
+      border: 1px solid var(--line);
+      padding: 15px 16px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .transfer-table th {
+      background: #f1f4f8;
+      color: #344054;
+      font-weight: 900;
+    }
+
+    .transfer-table td:first-child {
+      font-weight: 900;
+      color: var(--brand);
+      width: 28%;
+    }
+
+    .learning {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    .step {
+      border: 1px solid var(--line);
+      background: #fbfcfe;
+      padding: 18px;
+      min-height: 138px;
+    }
+
+    .step em {
+      display: block;
+      color: var(--teal);
+      font-style: normal;
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .step strong {
+      display: block;
+      margin-top: 6px;
+      font-size: 19px;
+    }
+
+    .step span {
+      display: block;
+      margin-top: 7px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .cta {
+      margin-top: 28px;
+      padding: 28px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 20px;
+      background: #fbf4e8;
+      border-color: #ead8b9;
+    }
+
+    .cta h2 {
+      margin: 0;
+      font-size: 25px;
+      letter-spacing: 0;
+    }
+
+    .cta p {
+      margin: 6px 0 0;
+      color: #765018;
+    }
+
+    .cta .btn {
+      border-color: var(--gold);
+      background: var(--gold);
+      color: #fff;
+      white-space: nowrap;
+    }
+
+    .note {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 920px) {
+      .nav {
+        display: none;
+      }
+
+      .why-grid,
+      .learning {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .audience-grid,
+      .quota-grid,
+      .notice,
+      .cta {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .topbar-inner,
+      .hero-inner,
+      main {
+        width: min(100% - 28px, 1160px);
+      }
+
+      .hero-inner {
+        min-height: 360px;
+        padding: 42px 0 76px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .why-grid,
+      .learning {
+        grid-template-columns: 1fr;
+      }
+
+      .section,
+      .cta {
+        padding: 18px;
+      }
+
+      .section-head {
+        display: block;
+      }
+
+      .section-head p {
+        margin-top: 6px;
+      }
+
+      .transfer-table {
+        font-size: 14px;
+      }
+
+      .transfer-table th,
+      .transfer-table td {
+        padding: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <div class="brand-mark">EC</div>
+        <div>東吳大學經濟學系</div>
+      </div>
+      <nav class="nav" aria-label="主要選單">
+        <a href="#">最新消息</a>
+        <a href="#">學系介紹</a>
+        <a href="#">課程資訊</a>
+        <a href="#">招生資訊</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="crumb">首頁 / 招生資訊 / 學士班</div>
+      <h1>學士班招生資訊</h1>
+      <p>用經濟學理解世界，用資料與理論做出更好的決策。東吳經濟陪你從基礎能力走向財務金融、資料分析、公共政策與產業應用。</p>
+      <div class="hero-actions">
+        <a class="btn" href="https://entrance.exam.scu.edu.tw/">查看最新招生簡章</a>
+        <a class="btn secondary" href="course-map-demo.html">了解學士班課程</a>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section class="notice">
+      <div>
+        <h2>最新招生簡章與報名時程</h2>
+        <p>招生名額、報名日期、考試日期與採計方式，請以東吳大學教務處招生組公告為準。</p>
+      </div>
+      <a class="btn" href="https://entrance.exam.scu.edu.tw/">前往招生資訊網</a>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>高中生入學管道名額</h2>
+        <p>115 學年度一般生名額示意，正式數字仍以招生簡章公告為準。</p>
+      </div>
+      <div class="quota-grid">
+        <article class="quota">
+          <strong>27</strong>
+          <h3>繁星推薦</h3>
+          <p>適合高中在校成績穩定、符合推薦條件的學生。</p>
+          <div class="link-row">
+            <span class="pill">高中生入學</span>
+            <span class="pill">校內推薦</span>
+          </div>
+        </article>
+        <article class="quota">
+          <strong>91</strong>
+          <h3>申請入學</h3>
+          <p>重視學測表現、學習歷程與審查資料準備。</p>
+          <div class="subjects">
+            <b>第一階段</b><br>
+            檢定科目：數學B<br>
+            採計科目：英文、數學B<br>
+            <b>第二階段</b><br>
+            資料審查、面試。
+          </div>
+          <div class="link-row">
+            <span class="pill">高中生入學</span>
+            <span class="pill">學習歷程</span>
+          </div>
+        </article>
+        <article class="quota">
+          <strong>60</strong>
+          <h3>分發入學</h3>
+          <p>依分科測驗與招生簡章採計規則辦理分發。</p>
+          <div class="subjects">
+            <b>採計科目</b><br>
+            國文、英文、數學乙。
+          </div>
+          <div class="link-row">
+            <span class="pill">高中生入學</span>
+            <span class="pill">分科測驗</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>多元入學管道</h2>
+        <p>高中生一般入學已整併於上方名額區，這裡保留轉學與其他身分入口。</p>
+      </div>
+      <div class="audience-grid">
+        <article class="card transfer">
+          <h3>轉學生入學</h3>
+          <p>暑假轉學生招生考試採筆試，依報考年級規劃不同考科，適合已具備經濟或商管基礎的學生。</p>
+          <div class="link-row">
+            <span class="pill">二年級</span>
+            <span class="pill">三年級</span>
+            <span class="pill">筆試</span>
+          </div>
+        </article>
+        <article class="card other">
+          <h3>特殊身分與境外招生</h3>
+          <p>境外生、僑生、港澳生與其他特殊身分招生管道，建議直接查詢東吳大學招生資訊網與國際事務單位公告。</p>
+          <div class="link-row">
+            <span class="pill">境外生</span>
+            <span class="pill">僑生</span>
+            <span class="pill">校方公告</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>為什麼選東吳經濟</h2>
+        <p>招生頁不只列考試資訊，也要回答學生最在意的選系問題。</p>
+      </div>
+      <div class="why-grid">
+        <div class="why">
+          <div class="number">01</div>
+          <strong>理論與應用並重</strong>
+          <p>從個體經濟學、總體經濟學到產業與政策議題，訓練完整的分析框架。</p>
+        </div>
+        <div class="why">
+          <div class="number">02</div>
+          <strong>資料分析能力</strong>
+          <p>結合 Python、R、計量經濟學與資料分析方法，培養能處理真實資料的能力。</p>
+        </div>
+        <div class="why">
+          <div class="number">03</div>
+          <strong>財務金融銜接</strong>
+          <p>投資學、財務管理、金融市場等課程，協助學生連結金融產業與商業決策。</p>
+        </div>
+        <div class="why">
+          <div class="number">04</div>
+          <strong>職涯與升學彈性</strong>
+          <p>可銜接研究所、金融業、公部門、一般企業、研究單位與資料分析職務。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>轉學生招生考試</h2>
+        <p>以下為頁面資訊整理示意，實際內容仍需依年度簡章更新。</p>
+      </div>
+      <table class="transfer-table">
+        <thead>
+          <tr>
+            <th>報考年級</th>
+            <th>考試科目</th>
+            <th>權重</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>日間學制二年級</td>
+            <td>經濟學、微積分</td>
+            <td>經濟學 × 1、微積分 × 1</td>
+          </tr>
+          <tr>
+            <td>日間學制三年級</td>
+            <td>經濟學、經濟數學</td>
+            <td>經濟學 × 1、經濟數學 × 1</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>入學後你會怎麼學</h2>
+        <p>把招生頁和課程地圖接起來，讓學生看見四年規劃。</p>
+      </div>
+      <div class="learning">
+        <div class="step">
+          <em>一年級</em>
+          <strong>建立基礎</strong>
+          <span>經濟學原理、微積分、會計學，建立理解商業與社會議題的語言。</span>
+        </div>
+        <div class="step">
+          <em>二年級</em>
+          <strong>核心訓練</strong>
+          <span>個體經濟學、總體經濟學、統計學、貨幣銀行學與國際貿易。</span>
+        </div>
+        <div class="step">
+          <em>三至四年級</em>
+          <strong>專業分流</strong>
+          <span>依興趣選擇財務金融、資料分析、公共政策或產業應用方向。</span>
+        </div>
+        <div class="step">
+          <em>畢業後</em>
+          <strong>升學就業</strong>
+          <span>銜接研究所、金融業、公部門、一般企業與資料分析相關職務。</span>
+        </div>
+      </div>
+    </section>
+
+    <p class="note">此頁為設計示意稿，正式上線前需補上當年度招生名額、重要日期、招生簡章 PDF 與校方正式連結。</p>
+  </main>
+</body>
+</html>

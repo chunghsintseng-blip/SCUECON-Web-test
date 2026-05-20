@@ -1,0 +1,154 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1050" viewBox="0 0 1600 1050" role="img" aria-labelledby="title desc">
+  <title id="title">東吳大學經濟學系學士班課程地圖</title>
+  <desc id="desc">以基礎課程、核心課程、專業分流、學程認證與職涯發展整理經濟學系學士班課程。</desc>
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#18202f" flood-opacity=".12"/>
+    </filter>
+    <style>
+      .bg { fill: #f5f7fb; }
+      .paper { fill: #ffffff; }
+      .ink { fill: #172033; }
+      .muted { fill: #667085; }
+      .line { stroke: #d8deea; stroke-width: 2; }
+      .thin { stroke: #e7ebf2; stroke-width: 1.5; }
+      .brand { fill: #1c3b7f; }
+      .brand-dark { fill: #142c61; }
+      .gold { fill: #b88a3d; }
+      .blue { fill: #105389; }
+      .green { fill: #4f7f74; }
+      .teal { fill: #2f758a; }
+      .purple { fill: #58608f; }
+      .soft-red { fill: #eef3fb; }
+      .soft-blue { fill: #eef4fb; }
+      .soft-green { fill: #edf6f3; }
+      .soft-gold { fill: #fbf4e8; }
+      .soft-teal { fill: #eaf7f8; }
+      .white { fill: #ffffff; }
+      .h1 { font: 800 54px "Noto Sans TC", "Microsoft JhengHei", sans-serif; letter-spacing: 0; }
+      .h2 { font: 800 28px "Noto Sans TC", "Microsoft JhengHei", sans-serif; letter-spacing: 0; }
+      .h3 { font: 800 23px "Noto Sans TC", "Microsoft JhengHei", sans-serif; letter-spacing: 0; }
+      .body { font: 500 19px "Noto Sans TC", "Microsoft JhengHei", sans-serif; letter-spacing: 0; }
+      .small { font: 700 16px "Noto Sans TC", "Microsoft JhengHei", sans-serif; letter-spacing: 0; }
+      .tiny { font: 600 14px "Noto Sans TC", "Microsoft JhengHei", sans-serif; letter-spacing: 0; }
+      .chip { font: 800 15px "Noto Sans TC", "Microsoft JhengHei", sans-serif; letter-spacing: 0; }
+    </style>
+    <marker id="arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+      <path d="M2 2 L10 6 L2 10 Z" fill="#9aa4b5"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="1600" height="1050"/>
+  <rect x="60" y="48" width="1480" height="954" rx="18" class="paper" filter="url(#shadow)"/>
+
+  <rect x="60" y="48" width="1480" height="176" rx="18" class="brand-dark"/>
+  <path d="M60 206 H1540 V224 H60 Z" class="brand"/>
+  <circle cx="1300" cy="20" r="220" fill="#ffffff" opacity=".07"/>
+  <circle cx="1450" cy="176" r="170" fill="#ffffff" opacity=".07"/>
+  <text x="116" y="116" class="small white">東吳大學經濟學系 Department of Economics</text>
+  <text x="116" y="176" class="h1 white">學士班課程地圖</text>
+  <text x="1058" y="118" class="body white" opacity=".92">基礎能力 → 核心理論 → 專業分流 → 學程認證</text>
+  <text x="1058" y="158" class="body white" opacity=".78">以學生選課、升學與就業規劃為核心</text>
+
+  <text x="116" y="284" class="h2 ink">四年學習路徑</text>
+  <text x="116" y="318" class="body muted">先建立共同能力，再依興趣選擇專業方向。</text>
+
+  <g transform="translate(116 350)">
+    <rect width="300" height="122" rx="12" class="soft-red" stroke="#ead4d9" stroke-width="2"/>
+    <text x="24" y="34" class="chip brand">一年級</text>
+    <text x="24" y="72" class="h3 ink">基礎課程</text>
+    <text x="24" y="104" class="body muted">經濟學原理、微積分、會計學</text>
+  </g>
+  <line x1="430" y1="411" x2="488" y2="411" class="line" marker-end="url(#arrow)"/>
+
+  <g transform="translate(500 350)">
+    <rect width="300" height="122" rx="12" class="soft-blue" stroke="#d5e2f3" stroke-width="2"/>
+    <text x="24" y="34" class="chip blue">二年級</text>
+    <text x="24" y="72" class="h3 ink">核心課程</text>
+    <text x="24" y="96" class="tiny muted">個體經濟學、總體經濟學</text>
+    <text x="24" y="118" class="tiny muted">統計學、貨幣銀行學、國際貿易</text>
+  </g>
+  <line x1="814" y1="411" x2="872" y2="411" class="line" marker-end="url(#arrow)"/>
+
+  <g transform="translate(884 350)">
+    <rect width="300" height="122" rx="12" class="soft-green" stroke="#d2e8df" stroke-width="2"/>
+    <text x="24" y="34" class="chip green">三至四年級</text>
+    <text x="24" y="72" class="h3 ink">專業分流</text>
+    <text x="24" y="96" class="tiny muted">財務金融、資料分析、公共政策</text>
+    <text x="24" y="118" class="tiny muted">與產業應用</text>
+  </g>
+  <line x1="1198" y1="411" x2="1256" y2="411" class="line" marker-end="url(#arrow)"/>
+
+  <g transform="translate(1268 350)">
+    <rect width="216" height="122" rx="12" class="soft-gold" stroke="#ead8b9" stroke-width="2"/>
+    <text x="24" y="34" class="chip gold">畢業後</text>
+    <text x="24" y="72" class="h3 ink">升學與就業</text>
+    <text x="24" y="96" class="tiny muted">研究所、金融業、公部門</text>
+    <text x="24" y="118" class="tiny muted">與資料分析職務</text>
+  </g>
+
+  <text x="116" y="540" class="h2 ink">專業分流與建議課程</text>
+  <text x="116" y="574" class="body muted">四個方向可交叉修讀；下列為選課規劃時最容易理解的分組方式。</text>
+
+  <g transform="translate(116 610)">
+    <rect width="330" height="260" rx="14" class="paper" stroke="#d8deea" stroke-width="2"/>
+    <rect width="330" height="74" rx="14" class="green"/>
+    <rect y="58" width="330" height="16" class="green"/>
+    <text x="24" y="45" class="h3 white">產業與勞動</text>
+    <text x="24" y="106" class="small green">產業分析｜勞動市場｜區域研究</text>
+    <line x1="24" y1="126" x2="306" y2="126" class="thin"/>
+    <text x="24" y="158" class="body ink">區域經濟學、產業經濟學</text>
+    <text x="24" y="192" class="body ink">勞動經濟學、海外經濟研究</text>
+    <text x="24" y="226" class="body ink">亞洲經濟研究、校外實習</text>
+  </g>
+
+  <g transform="translate(476 610)">
+    <rect width="330" height="260" rx="14" class="paper" stroke="#d8deea" stroke-width="2"/>
+    <rect width="330" height="74" rx="14" class="blue"/>
+    <rect y="58" width="330" height="16" class="blue"/>
+    <text x="24" y="45" class="h3 white">金融與財務</text>
+    <text x="24" y="106" class="small blue">金融市場｜投資｜財務管理</text>
+    <line x1="24" y1="126" x2="306" y2="126" class="thin"/>
+    <text x="24" y="158" class="body ink">投資學、財務經濟學</text>
+    <text x="24" y="192" class="body ink">財務管理、金融機構與市場</text>
+    <text x="24" y="226" class="body ink">期貨與選擇權、金融商品定價</text>
+  </g>
+
+  <g transform="translate(836 610)">
+    <rect width="330" height="260" rx="14" class="paper" stroke="#d8deea" stroke-width="2"/>
+    <rect width="330" height="74" rx="14" class="gold"/>
+    <rect y="58" width="330" height="16" class="gold"/>
+    <text x="24" y="45" class="h3 white">公共與財政</text>
+    <text x="24" y="106" class="small gold">政策分析｜財政｜永續議題</text>
+    <line x1="24" y1="126" x2="306" y2="126" class="thin"/>
+    <text x="24" y="158" class="body ink">國際政治經濟學、健康經濟學</text>
+    <text x="24" y="192" class="body ink">租稅理論、環境經濟</text>
+    <text x="24" y="226" class="body ink">公共政策與財經專題</text>
+  </g>
+
+  <g transform="translate(1196 610)">
+    <rect width="288" height="260" rx="14" class="paper" stroke="#d8deea" stroke-width="2"/>
+    <rect width="288" height="74" rx="14" class="teal"/>
+    <rect y="58" width="288" height="16" class="teal"/>
+    <text x="24" y="45" class="h3 white">數理與數量</text>
+    <text x="24" y="106" class="small teal">Python｜R｜計量分析</text>
+    <line x1="24" y1="126" x2="264" y2="126" class="thin"/>
+    <text x="24" y="158" class="body ink">Python 經濟應用、機器學習</text>
+    <text x="24" y="192" class="body ink">R 程式、資料分析方法</text>
+    <text x="24" y="226" class="body ink">計量經濟學、時間序列分析</text>
+  </g>
+
+  <g transform="translate(116 900)">
+    <rect width="660" height="86" rx="12" class="soft-blue" stroke="#d5e2f3" stroke-width="2"/>
+    <text x="24" y="32" class="h3 ink">專業學程</text>
+    <text x="24" y="60" class="body ink">財務金融學程、資料分析學程</text>
+    <text x="24" y="82" class="tiny muted">修讀 18 學分並完成學習成果。</text>
+  </g>
+
+  <g transform="translate(824 900)">
+    <rect width="660" height="86" rx="12" class="soft-red" stroke="#d5e2f3" stroke-width="2"/>
+    <text x="24" y="32" class="h3 ink">職涯發展</text>
+    <text x="24" y="60" class="body ink">研究所、金融業、一般商業、公部門</text>
+    <text x="24" y="82" class="tiny muted">研究單位與資料分析相關職務。</text>
+  </g>
+</svg>
