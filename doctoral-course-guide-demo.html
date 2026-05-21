@@ -137,6 +137,7 @@
     }
 
     .notice {
+      margin-top: 16px;
       padding: 24px;
       box-shadow: var(--shadow);
       display: grid;
@@ -185,8 +186,8 @@
     }
 
     .subnav {
-      margin-top: 16px;
       padding: 12px;
+      box-shadow: var(--shadow);
     }
 
     .subnav a[aria-current="page"] {
@@ -351,6 +352,12 @@
   </section>
 
   <main>
+    <nav class="subnav" aria-label="碩博士班課程分頁">
+      <a href="course-info-demo.html">課程資訊總覽</a>
+      <a href="master-course-guide-demo.html">碩士班修課須知</a>
+      <a href="doctoral-course-guide-demo.html" aria-current="page">博士班修課須知</a>
+    </nav>
+
     <section class="notice">
       <div>
         <h2>博士班修課資料總覽</h2>
@@ -363,12 +370,6 @@
         <a href="#degree">學位考試</a>
       </div>
     </section>
-
-    <nav class="subnav" aria-label="碩博士班課程分頁">
-      <a href="course-info-demo.html" target="_blank" rel="noopener noreferrer">課程資訊總覽</a>
-      <a href="master-course-guide-demo.html" target="_blank" rel="noopener noreferrer">碩士班修課須知</a>
-      <a href="doctoral-course-guide-demo.html" target="_blank" rel="noopener noreferrer" aria-current="page">博士班修課須知</a>
-    </nav>
 
     <section class="section">
       <div class="section-title">
