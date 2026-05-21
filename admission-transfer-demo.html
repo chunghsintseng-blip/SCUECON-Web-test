@@ -238,6 +238,7 @@
     .transfer-table {
       width: 100%;
       border-collapse: collapse;
+      table-layout: fixed;
       overflow: hidden;
       font-size: 16px;
     }
@@ -248,6 +249,7 @@
       padding: 15px 16px;
       text-align: left;
       vertical-align: top;
+      word-break: break-word;
     }
 
     .transfer-table th {
@@ -259,8 +261,19 @@
     .transfer-table td:first-child {
       font-weight: 900;
       color: var(--brand);
-      width: 28%;
     }
+
+    .transfer-table th:nth-child(1),
+    .transfer-table td:nth-child(1) { width: 18%; }
+
+    .transfer-table th:nth-child(2),
+    .transfer-table td:nth-child(2) { width: 12%; }
+
+    .transfer-table th:nth-child(3),
+    .transfer-table td:nth-child(3) { width: 30%; }
+
+    .transfer-table th:nth-child(4),
+    .transfer-table td:nth-child(4) { width: 40%; }
 
     @media (max-width: 920px) {
       .nav {
