@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1050" viewBox="0 0 1600 1050" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1660" height="1360" viewBox="0 0 1660 1360" role="img" aria-labelledby="title desc">
   <title id="title">東吳大學經濟學系學士班課程地圖</title>
   <desc id="desc">以基礎課程、核心課程、專業分流、學程認證與職涯發展整理經濟學系學士班課程。</desc>
   <defs>
@@ -38,117 +38,163 @@
     </marker>
   </defs>
 
-  <rect class="bg" width="1600" height="1050"/>
-  <rect x="60" y="48" width="1480" height="954" rx="18" class="paper" filter="url(#shadow)"/>
+  <rect class="bg" width="1660" height="1360"/>
+  <rect x="60" y="48" width="1540" height="1244" rx="18" class="paper" filter="url(#shadow)"/>
 
-  <rect x="60" y="48" width="1480" height="176" rx="18" class="brand-dark"/>
-  <path d="M60 206 H1540 V224 H60 Z" class="brand"/>
+  <rect x="60" y="48" width="1540" height="176" rx="18" class="brand-dark"/>
+  <path d="M60 206 H1600 V224 H60 Z" class="brand"/>
   <circle cx="1300" cy="20" r="220" fill="#ffffff" opacity=".07"/>
-  <circle cx="1450" cy="176" r="170" fill="#ffffff" opacity=".07"/>
+  <circle cx="1510" cy="176" r="170" fill="#ffffff" opacity=".07"/>
   <text x="116" y="116" class="small white">東吳大學經濟學系 Department of Economics</text>
   <text x="116" y="176" class="h1 white">學士班課程地圖</text>
-  <text x="1058" y="118" class="body white" opacity=".92">基礎能力 → 核心理論 → 專業分流 → 學程認證</text>
-  <text x="1058" y="158" class="body white" opacity=".78">以學生選課、升學與就業規劃為核心</text>
+  <text x="1058" y="118" class="body white" opacity=".92">基礎課程 → 核心課程 → 專業分流 → 職涯發展</text>
+  <text x="1058" y="158" class="body white" opacity=".78">以學生選課、學程認證與職涯規劃為核心</text>
 
   <text x="116" y="284" class="h2 ink">四年學習路徑</text>
   <text x="116" y="318" class="body muted">先建立共同能力，再依興趣選擇專業方向。</text>
 
-  <g transform="translate(116 350)">
-    <rect width="300" height="122" rx="12" class="soft-red" stroke="#ead4d9" stroke-width="2"/>
-    <text x="24" y="34" class="chip brand">一年級</text>
-    <text x="24" y="72" class="h3 ink">基礎課程</text>
-    <text x="24" y="104" class="body muted">經濟學原理、微積分、會計學</text>
-  </g>
-  <line x1="430" y1="411" x2="488" y2="411" class="line" marker-end="url(#arrow)"/>
+  <foreignObject x="116" y="350" width="320" height="150">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="height:150px; box-sizing:border-box; border:2px solid #ead4d9; border-radius:12px; background:#eef3fb; padding:18px; font-family:'Noto Sans TC','Microsoft JhengHei',sans-serif;">
+      <div style="color:#1c3b7f; font-size:15px; font-weight:900;">一年級</div>
+      <div style="margin-top:6px; color:#172033; font-size:23px; font-weight:800; line-height:1.25;">基礎課程</div>
+      <div style="margin-top:8px; color:#667085; font-size:16px; font-weight:600; line-height:1.55;">微積分、經濟學原理、會計學，建立經濟與商業分析基礎。</div>
+    </div>
+  </foreignObject>
+  <line x1="448" y1="425" x2="482" y2="425" class="line" marker-end="url(#arrow)"/>
 
-  <g transform="translate(500 350)">
-    <rect width="300" height="122" rx="12" class="soft-blue" stroke="#d5e2f3" stroke-width="2"/>
-    <text x="24" y="34" class="chip blue">二年級</text>
-    <text x="24" y="72" class="h3 ink">核心課程</text>
-    <text x="24" y="96" class="tiny muted">個體經濟學、總體經濟學</text>
-    <text x="24" y="118" class="tiny muted">統計學、貨幣銀行學、國際貿易</text>
-  </g>
-  <line x1="814" y1="411" x2="872" y2="411" class="line" marker-end="url(#arrow)"/>
+  <foreignObject x="494" y="350" width="320" height="150">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="height:150px; box-sizing:border-box; border:2px solid #d5e2f3; border-radius:12px; background:#eef4fb; padding:18px; font-family:'Noto Sans TC','Microsoft JhengHei',sans-serif;">
+      <div style="color:#105389; font-size:15px; font-weight:900;">二年級</div>
+      <div style="margin-top:6px; color:#172033; font-size:23px; font-weight:800; line-height:1.25;">核心課程</div>
+      <div style="margin-top:8px; color:#667085; font-size:16px; font-weight:600; line-height:1.55;">個體經濟學、總體經濟學、統計學、經濟數學，強化理論與量化分析能力。</div>
+    </div>
+  </foreignObject>
+  <line x1="826" y1="425" x2="860" y2="425" class="line" marker-end="url(#arrow)"/>
 
-  <g transform="translate(884 350)">
-    <rect width="300" height="122" rx="12" class="soft-green" stroke="#d2e8df" stroke-width="2"/>
-    <text x="24" y="34" class="chip green">三至四年級</text>
-    <text x="24" y="72" class="h3 ink">專業分流</text>
-    <text x="24" y="96" class="tiny muted">財務金融、資料分析、公共政策</text>
-    <text x="24" y="118" class="tiny muted">與產業應用</text>
-  </g>
-  <line x1="1198" y1="411" x2="1256" y2="411" class="line" marker-end="url(#arrow)"/>
+  <foreignObject x="872" y="350" width="320" height="150">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="height:150px; box-sizing:border-box; border:2px solid #d2e8df; border-radius:12px; background:#edf6f3; padding:18px; font-family:'Noto Sans TC','Microsoft JhengHei',sans-serif;">
+      <div style="color:#4f7f74; font-size:15px; font-weight:900;">三至四年級</div>
+      <div style="margin-top:6px; color:#172033; font-size:23px; font-weight:800; line-height:1.25;">專業分流</div>
+      <div style="margin-top:8px; color:#667085; font-size:16px; font-weight:600; line-height:1.55;">修讀貨幣銀行學、國際貿易、國際金融、財政學，並依興趣進入專業方向。</div>
+    </div>
+  </foreignObject>
+  <line x1="1204" y1="425" x2="1238" y2="425" class="line" marker-end="url(#arrow)"/>
 
-  <g transform="translate(1268 350)">
-    <rect width="216" height="122" rx="12" class="soft-gold" stroke="#ead8b9" stroke-width="2"/>
-    <text x="24" y="34" class="chip gold">畢業後</text>
-    <text x="24" y="72" class="h3 ink">升學與就業</text>
-    <text x="24" y="96" class="tiny muted">研究所、金融業、公部門</text>
-    <text x="24" y="118" class="tiny muted">與資料分析職務</text>
-  </g>
+  <foreignObject x="1250" y="350" width="320" height="150">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="height:150px; box-sizing:border-box; border:2px solid #ead8b9; border-radius:12px; background:#fbf4e8; padding:18px; font-family:'Noto Sans TC','Microsoft JhengHei',sans-serif;">
+      <div style="color:#b88a3d; font-size:15px; font-weight:900;">畢業後</div>
+      <div style="margin-top:6px; color:#172033; font-size:23px; font-weight:800; line-height:1.25;">職涯發展</div>
+      <div style="margin-top:8px; color:#667085; font-size:16px; font-weight:600; line-height:1.55;">銜接研究所、金融業、公部門、資料分析與產業研究。</div>
+    </div>
+  </foreignObject>
 
   <text x="116" y="540" class="h2 ink">專業分流與建議課程</text>
   <text x="116" y="574" class="body muted">四個方向可交叉修讀；下列為選課規劃時最容易理解的分組方式。</text>
 
-  <g transform="translate(116 610)">
-    <rect width="330" height="260" rx="14" class="paper" stroke="#d8deea" stroke-width="2"/>
+  <g transform="translate(1196 610)">
+    <rect width="330" height="480" rx="14" class="paper" stroke="#d8deea" stroke-width="2"/>
     <rect width="330" height="74" rx="14" class="green"/>
     <rect y="58" width="330" height="16" class="green"/>
     <text x="24" y="45" class="h3 white">產業與勞動</text>
     <text x="24" y="106" class="small green">產業分析｜勞動市場｜區域研究</text>
     <line x1="24" y1="126" x2="306" y2="126" class="thin"/>
-    <text x="24" y="158" class="body ink">區域經濟學、產業經濟學</text>
-    <text x="24" y="192" class="body ink">勞動經濟學、海外經濟研究</text>
-    <text x="24" y="226" class="body ink">亞洲經濟研究、校外實習</text>
+    <text x="24" y="154" class="tiny ink">區域經濟學</text>
+    <text x="24" y="184" class="tiny ink">產業經濟學</text>
+    <text x="24" y="214" class="tiny ink">勞動經濟學</text>
+    <text x="24" y="244" class="tiny ink">海外經濟研究</text>
+    <text x="24" y="274" class="tiny ink">亞洲經濟研究</text>
+    <text x="24" y="304" class="tiny ink">校外實習(一)(二)(三)</text>
+    <text x="24" y="334" class="tiny ink">職場溝通、倫理與職場權益</text>
+    <text x="24" y="364" class="tiny ink">管理經濟專題</text>
   </g>
 
-  <g transform="translate(476 610)">
-    <rect width="330" height="260" rx="14" class="paper" stroke="#d8deea" stroke-width="2"/>
+  <g transform="translate(116 610)">
+    <rect width="330" height="480" rx="14" class="paper" stroke="#d8deea" stroke-width="2"/>
     <rect width="330" height="74" rx="14" class="blue"/>
     <rect y="58" width="330" height="16" class="blue"/>
     <text x="24" y="45" class="h3 white">金融與財務</text>
     <text x="24" y="106" class="small blue">金融市場｜投資｜財務管理</text>
     <line x1="24" y1="126" x2="306" y2="126" class="thin"/>
-    <text x="24" y="158" class="body ink">投資學、財務經濟學</text>
-    <text x="24" y="192" class="body ink">財務管理、金融機構與市場</text>
-    <text x="24" y="226" class="body ink">期貨與選擇權、金融商品定價</text>
+    <text x="24" y="148" class="tiny ink">投資學</text>
+    <text x="24" y="170" class="tiny ink">財務經濟學</text>
+    <text x="24" y="192" class="tiny ink">財務管理</text>
+    <text x="24" y="214" class="tiny ink">股票投資分析與實務</text>
+    <text x="24" y="236" class="tiny ink">金融證照研習</text>
+    <text x="24" y="258" class="tiny ink">金融機構與市場</text>
+    <text x="24" y="280" class="tiny ink">財務報表分析</text>
+    <text x="24" y="302" class="tiny ink">期貨與選擇權</text>
+    <text x="24" y="324" class="tiny ink">新金融商品</text>
+    <text x="24" y="346" class="tiny ink">理財分析與實務</text>
+    <text x="24" y="368" class="tiny ink">基礎金融商品定價</text>
+    <text x="24" y="390" class="tiny ink">債券投資分析與實務</text>
+    <text x="24" y="412" class="tiny ink">量化交易</text>
+    <text x="24" y="434" class="tiny ink">選擇權定價概論</text>
+    <text x="24" y="456" class="tiny ink">金融理財與生活(A)(B)</text>
   </g>
 
   <g transform="translate(836 610)">
-    <rect width="330" height="260" rx="14" class="paper" stroke="#d8deea" stroke-width="2"/>
+    <rect width="330" height="480" rx="14" class="paper" stroke="#d8deea" stroke-width="2"/>
     <rect width="330" height="74" rx="14" class="gold"/>
     <rect y="58" width="330" height="16" class="gold"/>
     <text x="24" y="45" class="h3 white">公共與財政</text>
     <text x="24" y="106" class="small gold">政策分析｜財政｜永續議題</text>
     <line x1="24" y1="126" x2="306" y2="126" class="thin"/>
-    <text x="24" y="158" class="body ink">國際政治經濟學、健康經濟學</text>
-    <text x="24" y="192" class="body ink">租稅理論、環境經濟</text>
-    <text x="24" y="226" class="body ink">公共政策與財經專題</text>
+    <text x="24" y="148" class="tiny ink">經濟推理大解謎</text>
+    <text x="24" y="170" class="tiny ink">國際政治經濟學</text>
+    <text x="24" y="192" class="tiny ink">健康經濟學</text>
+    <text x="24" y="214" class="tiny ink">經濟論壇(A)(B)</text>
+    <text x="24" y="236" class="tiny ink">反托拉斯經濟學及案例分析</text>
+    <text x="24" y="258" class="tiny ink">貨幣理論與政策</text>
+    <text x="24" y="280" class="tiny ink">臺灣經濟發展與成長</text>
+    <text x="24" y="302" class="tiny ink">經濟學的基礎應用</text>
+    <text x="24" y="324" class="tiny ink">環境經濟與永續發展</text>
+    <text x="24" y="346" class="tiny ink">貨幣金融專題討論</text>
+    <text x="24" y="368" class="tiny ink">公共政策與財經專題(一)(二)</text>
+    <text x="24" y="390" class="tiny ink">進出口實務-政府管理面</text>
+    <text x="24" y="412" class="tiny ink">經濟發展</text>
+    <text x="24" y="434" class="tiny ink">R語言與政治經濟學</text>
   </g>
 
-  <g transform="translate(1196 610)">
-    <rect width="288" height="260" rx="14" class="paper" stroke="#d8deea" stroke-width="2"/>
-    <rect width="288" height="74" rx="14" class="teal"/>
-    <rect y="58" width="288" height="16" class="teal"/>
-    <text x="24" y="45" class="h3 white">數理與數量</text>
+  <g transform="translate(476 610)">
+    <rect width="330" height="480" rx="14" class="paper" stroke="#d8deea" stroke-width="2"/>
+    <rect width="330" height="74" rx="14" class="teal"/>
+    <rect y="58" width="330" height="16" class="teal"/>
+    <text x="24" y="45" class="h3 white">資料分析與量化</text>
     <text x="24" y="106" class="small teal">Python｜R｜計量分析</text>
-    <line x1="24" y1="126" x2="264" y2="126" class="thin"/>
-    <text x="24" y="158" class="body ink">Python 經濟應用、機器學習</text>
-    <text x="24" y="192" class="body ink">R 程式、資料分析方法</text>
-    <text x="24" y="226" class="body ink">計量經濟學、時間序列分析</text>
+    <line x1="24" y1="126" x2="306" y2="126" class="thin"/>
+    <text x="24" y="148" class="tiny ink">Python基礎程式與經濟應用</text>
+    <text x="24" y="170" class="tiny ink">機器學習與Python</text>
+    <text x="24" y="192" class="tiny ink">Python與資料分析</text>
+    <text x="24" y="214" class="tiny ink">R基礎程式與經濟應用</text>
+    <text x="24" y="236" class="tiny ink">R語言程式的經濟應用與分析</text>
+    <text x="24" y="258" class="tiny ink">新式資料分析方法-R程式之應用</text>
+    <text x="24" y="280" class="tiny ink">資料分析方法</text>
+    <text x="24" y="302" class="tiny ink">數量經濟學導論與R</text>
+    <text x="24" y="324" class="tiny ink">數理經濟學</text>
+    <text x="24" y="346" class="tiny ink">計量經濟學</text>
+    <text x="24" y="368" class="tiny ink">賽局理論與應用(A)(B)</text>
+    <text x="24" y="390" class="tiny ink">大數據計量經濟學</text>
+    <text x="24" y="412" class="tiny ink">數理統計學</text>
+    <text x="24" y="434" class="tiny ink">時間序列分析</text>
   </g>
 
-  <g transform="translate(116 900)">
-    <rect width="660" height="86" rx="12" class="soft-blue" stroke="#d5e2f3" stroke-width="2"/>
+  <g transform="translate(116 1110)">
+    <rect width="660" height="122" rx="12" class="soft-blue" stroke="#d5e2f3" stroke-width="2"/>
     <text x="24" y="32" class="h3 ink">專業學程</text>
-    <text x="24" y="60" class="body ink">財務金融學程、資料分析學程</text>
-    <text x="24" y="82" class="tiny muted">修讀 18 學分並完成學習成果。</text>
+    <rect x="24" y="48" width="292" height="48" rx="8" class="paper" stroke="#d8deea" stroke-width="1.5"/>
+    <text x="42" y="78" class="body ink">財務金融學程</text>
+    <rect x="336" y="48" width="292" height="48" rx="8" class="paper" stroke="#d8deea" stroke-width="1.5"/>
+    <text x="354" y="78" class="body ink">資料分析學程</text>
+    <text x="24" y="114" class="tiny muted">修讀 18 學分並完成學習成果。</text>
   </g>
 
-  <g transform="translate(824 900)">
-    <rect width="660" height="86" rx="12" class="soft-red" stroke="#d5e2f3" stroke-width="2"/>
+  <g transform="translate(824 1110)">
+    <rect width="660" height="122" rx="12" class="soft-red" stroke="#d5e2f3" stroke-width="2"/>
     <text x="24" y="32" class="h3 ink">職涯發展</text>
-    <text x="24" y="60" class="body ink">研究所、金融業、一般商業、公部門</text>
-    <text x="24" y="82" class="tiny muted">研究單位與資料分析相關職務。</text>
+    <rect x="24" y="48" width="292" height="48" rx="8" class="paper" stroke="#d8deea" stroke-width="1.5"/>
+    <text x="42" y="78" class="body ink">升學：經濟、財經、商學研究所</text>
+    <rect x="336" y="48" width="292" height="48" rx="8" class="paper" stroke="#d8deea" stroke-width="1.5"/>
+    <text x="354" y="78" class="body ink">就業：金融、公部門、資料分析</text>
+    <text x="24" y="114" class="tiny muted">亦可銜接一般企業、研究單位與產業研究職務。</text>
   </g>
 </svg>

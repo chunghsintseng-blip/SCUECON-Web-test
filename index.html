@@ -31,7 +31,7 @@
     }
 
     main {
-      width: min(920px, calc(100% - 32px));
+      width: min(1180px, calc(100% - 32px));
       margin: 0 auto;
       padding: 72px 0;
     }
@@ -104,6 +104,12 @@
       line-height: 1.7;
     }
 
+    @media (max-width: 1040px) {
+      .links {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
     @media (max-width: 720px) {
       main {
         padding: 48px 0;
@@ -120,7 +126,7 @@
     <section class="masthead" aria-labelledby="page-title">
       <p class="eyebrow">SCU Economics Demo</p>
       <h1 id="page-title">東吳大學經濟學系 Demo 頁面</h1>
-      <p class="lead">這裡整理目前上傳到 GitHub Pages 的兩個測試頁面，可直接進入預覽招生資訊與課程地圖設計。</p>
+      <p class="lead">這裡整理目前上傳到 GitHub Pages 的測試頁面，可直接進入預覽招生資訊與課程資訊。</p>
     </section>
 
     <nav class="links" aria-label="Demo pages">
@@ -128,9 +134,9 @@
         <strong>學士班招生資訊 Demo</strong>
         <span>查看學士班招生頁面的版面、資訊區塊與行動按鈕。</span>
       </a>
-      <a class="demo" href="course-map-demo.html">
-        <strong>學士班課程地圖 Demo</strong>
-        <span>查看課程地圖頁面，以及重新設計的課程架構圖。</span>
+      <a class="demo" href="course-info-demo.html">
+        <strong>課程資訊 Demo</strong>
+        <span>查看課程資訊入口總覽頁與各學制分組。</span>
       </a>
     </nav>
   </main>

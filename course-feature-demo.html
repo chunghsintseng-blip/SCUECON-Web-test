@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>東吳經濟學系｜課程特色範例</title>
+  <style>
+    :root {
+      --ink: #18202f;
+      --muted: #667085;
+      --line: #d9dee8;
+      --paper: #ffffff;
+      --soft: #f6f8fb;
+      --brand: #1c3b7f;
+      --brand-dark: #142c61;
+      --brand-deep: #0b1835;
+      --gold: #b9862f;
+      --teal: #287d86;
+      --green: #4a7a4f;
+      --shadow: 0 18px 46px rgba(24, 32, 47, .10);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--soft);
+      font-family: "Noto Sans TC", "Microsoft JhengHei", system-ui, sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .topbar {
+      border-bottom: 1px solid rgba(255, 255, 255, .18);
+      background: var(--brand-dark);
+      color: #fff;
+    }
+
+    .topbar-inner {
+      width: min(1160px, calc(100% - 40px));
+      min-height: 64px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(255, 255, 255, .42);
+      color: #fff;
+      font-size: 14px;
+    }
+
+    .nav {
+      display: flex;
+      gap: 24px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .nav a {
+      color: rgba(255, 255, 255, .86);
+      text-decoration: none;
+    }
+
+    .nav a[aria-current="page"] {
+      color: #fff;
+    }
+
+    .hero {
+      color: #fff;
+      background:
+        linear-gradient(90deg, rgba(11, 24, 53, .94), rgba(28, 59, 127, .78)),
+        url("https://www.scu.edu.tw/econ/images/top/main-img01.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero-inner {
+      width: min(1160px, calc(100% - 40px));
+      min-height: 330px;
+      margin: 0 auto;
+      padding: 56px 0 72px;
+      display: grid;
+      align-content: center;
+    }
+
+    .crumb {
+      margin-bottom: 14px;
+      color: rgba(255, 255, 255, .72);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(36px, 5vw, 64px);
+      line-height: 1.12;
+      letter-spacing: 0;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 18px 0 0;
+      color: rgba(255, 255, 255, .88);
+      font-size: 19px;
+    }
+
+    main {
+      width: min(1160px, calc(100% - 40px));
+      margin: -38px auto 72px;
+    }
+
+    .notice,
+    .section,
+    .feature-card,
+    .goal,
+    .subnav {
+      background: var(--paper);
+      border: 1px solid var(--line);
+    }
+
+    .notice {
+      padding: 24px;
+      box-shadow: var(--shadow);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .notice h2,
+    .section-title h2 {
+      margin: 0;
+      font-size: 26px;
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+
+    .notice p,
+    .section-title p {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .subnav {
+      margin-top: 16px;
+      padding: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .subnav a {
+      min-height: 38px;
+      padding: 0 13px;
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid #dfe6ef;
+      color: var(--brand-dark);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .subnav a[aria-current="page"] {
+      border-color: var(--brand);
+      background: var(--brand);
+      color: #fff;
+    }
+
+    .section {
+      margin-top: 28px;
+      padding: 24px;
+    }
+
+    .section-title {
+      margin-bottom: 18px;
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .goal-grid,
+    .feature-grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    .goal-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .goal {
+      min-height: 154px;
+      padding: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .goal::before,
+    .feature-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto;
+      height: 5px;
+      background: var(--brand);
+    }
+
+    .goal:nth-child(2)::before,
+    .feature-card.teal::before {
+      background: var(--teal);
+    }
+
+    .goal:nth-child(3)::before,
+    .feature-card.gold::before {
+      background: var(--gold);
+    }
+
+    .feature-card.green::before {
+      background: var(--green);
+    }
+
+    .goal em {
+      display: block;
+      color: var(--gold);
+      font-style: normal;
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .goal strong {
+      display: block;
+      margin-top: 8px;
+      color: var(--brand-dark);
+      font-size: 22px;
+      line-height: 1.35;
+    }
+
+    .goal span {
+      display: block;
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .feature-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .feature-card {
+      min-height: 210px;
+      padding: 22px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .feature-card h3 {
+      margin: 0;
+      color: var(--brand-dark);
+      font-size: 22px;
+      line-height: 1.35;
+      letter-spacing: 0;
+    }
+
+    .feature-card p {
+      margin: 12px 0 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .tag-row {
+      margin-top: 16px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      padding: 5px 9px;
+      border: 1px solid #e6ebf3;
+      background: #fbfcfe;
+      color: #475467;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    @media (max-width: 960px) {
+      .notice,
+      .goal-grid,
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .topbar-inner,
+      .hero-inner,
+      main {
+        width: min(100% - 28px, 1160px);
+      }
+
+      .nav {
+        display: none;
+      }
+
+      .hero-inner {
+        min-height: 300px;
+        padding: 40px 0 64px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .notice,
+      .section,
+      .feature-card,
+      .goal {
+        padding: 18px;
+      }
+
+      .section-title {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <div class="brand-mark">EC</div>
+        <div>東吳大學經濟學系</div>
+      </div>
+      <nav class="nav" aria-label="主要選單">
+        <a href="#" target="_blank" rel="noopener noreferrer">最新消息</a>
+        <a href="#" target="_blank" rel="noopener noreferrer">學系介紹</a>
+        <a href="course-info-demo.html" target="_blank" rel="noopener noreferrer" aria-current="page">課程資訊</a>
+        <a href="admission-undergrad-demo.html" target="_blank" rel="noopener noreferrer">招生資訊</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="crumb">首頁 / 課程資訊 / 學士班 / 課程特色</div>
+      <h1>課程特色</h1>
+      <p>以經濟理論與數量分析為基礎，結合資料、財務、公共政策與產業應用，培養能進一步升學、研究與就業的經濟分析人才。</p>
+    </div>
+  </section>
+
+  <main>
+    <section class="notice">
+      <div>
+        <h2>學士班課程設計</h2>
+        <p>大學部重視理論根基、資料分析、應用實務與學習支持，研究所延伸至進階理論與研究訓練。</p>
+      </div>
+    </section>
+
+    <nav class="subnav" aria-label="學士班課程分頁">
+      <a href="professional-program-demo.html" target="_blank" rel="noopener noreferrer">專業學程</a>
+      <a href="course-feature-demo.html" target="_blank" rel="noopener noreferrer" aria-current="page">課程特色</a>
+      <a href="course-map-demo.html" target="_blank" rel="noopener noreferrer">課程地圖</a>
+      <a href="undergrad-course-guide-demo.html" target="_blank" rel="noopener noreferrer">大學部修課須知</a>
+    </nav>
+
+    <section class="section">
+      <div class="section-title">
+        <div>
+          <h2>教學目標</h2>
+          <p>對應經濟學系培育學生的三個核心方向。</p>
+        </div>
+      </div>
+      <div class="goal-grid">
+        <article class="goal">
+          <em>01</em>
+          <strong>建立經濟理論與數量分析基礎</strong>
+          <span>先打穩個體、總體、統計、計量與數理工具，形成後續分析能力。</span>
+        </article>
+        <article class="goal">
+          <em>02</em>
+          <strong>加強經濟學在各領域之運用</strong>
+          <span>把經濟思維帶到財務金融、產業、公共政策與資料分析等場域。</span>
+        </article>
+        <article class="goal">
+          <em>03</em>
+          <strong>培育具國際觀之經濟分析人才</strong>
+          <span>透過語言、專業閱讀與國際經濟議題，建立跨國視野。</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">
+        <div>
+          <h2>大學部課程特色與優勢</h2>
+          <p>從基礎訓練走向實務應用，並提供課後學習支持。</p>
+        </div>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <h3>理論為基，應用為輔</h3>
+          <p>課程先建立扎實的經濟理論，再搭配實務與應用課程，讓分析能力能接上真實問題。</p>
+          <div class="tag-row">
+            <span class="tag">經濟理論</span>
+            <span class="tag">應用課程</span>
+          </div>
+        </article>
+        <article class="feature-card teal">
+          <h3>統計計量與數理訓練</h3>
+          <p>透過統計學、計量經濟學、財經資料庫應用與分析、數理經濟學等課程，強化資料分析與量化能力。</p>
+          <div class="tag-row">
+            <span class="tag">統計學</span>
+            <span class="tag">計量經濟學</span>
+            <span class="tag">數理經濟學</span>
+          </div>
+        </article>
+        <article class="feature-card gold">
+          <h3>多元應用與實務課程</h3>
+          <p>基礎理論之外，開設商業銀行經營、財經新聞、財經英文、證券投資與理財分析等課程，兼顧升學與就業需求。</p>
+          <div class="tag-row">
+            <span class="tag">財務金融</span>
+            <span class="tag">財經英文</span>
+            <span class="tag">證券投資</span>
+          </div>
+        </article>
+        <article class="feature-card green">
+          <h3>助教與課後輔導</h3>
+          <p>基礎與困難課程搭配演習課與課後輔導，並有專任助教支援學生學習。</p>
+          <div class="tag-row">
+            <span class="tag">演習課</span>
+            <span class="tag">課後輔導</span>
+            <span class="tag">專任助教</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">
+        <div>
+          <h2>研究所課程特色與優勢</h2>
+          <p>研究所課程延伸進階理論、專業領域與研究寫作能力。</p>
+        </div>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <h3>進階經濟理論基礎</h3>
+          <p>碩士班以個體、總體與計量經濟學作為核心訓練，並可銜接博士班相關進階課程。</p>
+        </article>
+        <article class="feature-card teal">
+          <h3>專兼任師資深化教學</h3>
+          <p>除專任師資外，也邀請具研究表現與專業經驗的學者開課，拓展研究所教學內涵。</p>
+        </article>
+        <article class="feature-card gold">
+          <h3>多樣經濟專業理論課程</h3>
+          <p>涵蓋經濟學方法論、制度經濟學、實驗經濟學、區域經濟學、運輸經濟學、技術與網路經濟學等領域。</p>
+        </article>
+        <article class="feature-card green">
+          <h3>專題討論與論文寫作訓練</h3>
+          <p>透過專題討論、研究成果分享與論文寫作訓練，培養學生進行理論與實證研究的能力。</p>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -108,7 +108,7 @@
     h1 {
       margin: 0;
       max-width: 720px;
-      font-size: clamp(34px, 5vw, 58px);
+      font-size: clamp(36px, 5vw, 64px);
       line-height: 1.08;
       letter-spacing: 0;
     }
@@ -117,21 +117,12 @@
       max-width: 660px;
       margin: 18px 0 0;
       color: rgba(255, 255, 255, .88);
-      font-size: 18px;
+      font-size: 19px;
     }
 
     main {
       width: min(1160px, calc(100% - 40px));
       margin: -38px auto 72px;
-    }
-
-    .quick-panel {
-      background: var(--paper);
-      border: 1px solid var(--line);
-      box-shadow: var(--shadow);
-      padding: 18px;
-      display: flex;
-      justify-content: flex-end;
     }
 
     .download {
@@ -422,7 +413,6 @@
 
       .overview,
       .map-preview,
-      .quick-panel,
       .path-box {
         padding: 16px;
       }
@@ -468,10 +458,6 @@
   </section>
 
   <main>
-    <section class="quick-panel" aria-label="課程地圖下載">
-      <a class="download" href="course-map-redesign.svg">下載重新設計圖檔</a>
-    </section>
-
     <section class="overview">
       <div class="section-title">
         <h2>四年學習路徑</h2>
@@ -481,50 +467,27 @@
         <div class="flow-step">
           <div class="step-kicker">一年級</div>
           <strong>基礎課程</strong>
-          <span>微積分、經濟學原理、會計學，建立分析語言。</span>
+          <span>微積分、經濟學原理、會計學，建立經濟與商業分析基礎。</span>
         </div>
         <div class="flow-step">
           <div class="step-kicker">二年級</div>
           <strong>核心課程</strong>
-          <span>個體經濟學、總體經濟學、統計學、貨幣銀行學、國際貿易等專業基礎。</span>
+          <span>個體經濟學、總體經濟學、統計學、經濟數學，強化理論與量化分析能力。</span>
         </div>
         <div class="flow-step">
           <div class="step-kicker">三至四年級</div>
           <strong>專業分流</strong>
-          <span>依興趣進入財務金融、資料分析、公共政策或產業應用方向。</span>
+          <span>修讀貨幣銀行學、國際貿易、國際金融、財政學，並依興趣進入專業方向。</span>
         </div>
         <div class="flow-step">
           <div class="step-kicker">畢業後</div>
-          <strong>升學與就業</strong>
+          <strong>職涯發展</strong>
           <span>銜接研究所、金融業、公部門、資料分析與產業研究。</span>
         </div>
       </div>
     </section>
 
     <section class="grid" aria-label="專業分流">
-      <article class="track" data-track="industry">
-        <div class="track-head">
-          <h3>產業與勞動</h3>
-          <p>理解產業結構、勞動市場與區域經濟。</p>
-        </div>
-        <div class="track-body">
-          <div class="tag-row">
-            <span class="tag">產業分析</span>
-            <span class="tag">勞動市場</span>
-            <span class="tag">區域研究</span>
-          </div>
-          <ul class="course-list">
-            <li>區域經濟學</li>
-            <li>產業經濟學</li>
-            <li>勞動經濟學</li>
-            <li>海外經濟研究</li>
-            <li>亞洲經濟研究</li>
-            <li>校外實習</li>
-            <li>職場溝通、倫理與職場權益</li>
-          </ul>
-        </div>
-      </article>
-
       <article class="track" data-track="finance">
         <div class="track-head">
           <h3>金融與財務</h3>
@@ -540,10 +503,48 @@
             <li>投資學</li>
             <li>財務經濟學</li>
             <li>財務管理</li>
+            <li>股票投資分析與實務</li>
+            <li>金融證照研習</li>
             <li>金融機構與市場</li>
             <li>財務報表分析</li>
             <li>期貨與選擇權</li>
-            <li>基金與金融商品定價</li>
+            <li>新金融商品</li>
+            <li>理財分析與實務</li>
+            <li>基礎金融商品定價</li>
+            <li>債券投資分析與實務</li>
+            <li>量化交易</li>
+            <li>選擇權定價概論</li>
+            <li>金融理財與生活(A)(B)</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="track" data-track="data">
+        <div class="track-head">
+          <h3>資料分析與量化</h3>
+          <p>培養資料處理、程式與計量分析力。</p>
+        </div>
+        <div class="track-body">
+          <div class="tag-row">
+            <span class="tag">Python</span>
+            <span class="tag">R</span>
+            <span class="tag">計量經濟</span>
+          </div>
+          <ul class="course-list">
+            <li>Python 基礎程式與經濟應用</li>
+            <li>機器學習與 Python</li>
+            <li>Python 與資料分析</li>
+            <li>R 基礎程式與經濟應用</li>
+            <li>R 語言程式的經濟應用與分析</li>
+            <li>新式資料分析方法-R 程式之應用</li>
+            <li>資料分析方法</li>
+            <li>數量經濟學導論與 R</li>
+            <li>數理經濟學</li>
+            <li>計量經濟學</li>
+            <li>賽局理論與應用(A)(B)</li>
+            <li>大數據計量經濟學</li>
+            <li>數理統計學</li>
+            <li>時間序列分析</li>
           </ul>
         </div>
       </article>
@@ -563,33 +564,41 @@
             <li>經濟推理大解謎</li>
             <li>國際政治經濟學</li>
             <li>健康經濟學</li>
-            <li>租稅理論</li>
+            <li>經濟論壇(A)(B)</li>
+            <li>反托拉斯經濟學及案例分析</li>
+            <li>貨幣理論與政策</li>
+            <li>臺灣經濟發展與成長</li>
+            <li>經濟學的基礎應用</li>
             <li>環境經濟與永續發展</li>
-            <li>公共政策與財經專題</li>
+            <li>貨幣金融專題討論</li>
+            <li>公共政策與財經專題(一)(二)</li>
+            <li>進出口實務-政府管理面</li>
             <li>經濟發展</li>
+            <li>R語言與政治經濟學</li>
           </ul>
         </div>
       </article>
 
-      <article class="track" data-track="data">
+      <article class="track" data-track="industry">
         <div class="track-head">
-          <h3>數理與數量</h3>
-          <p>培養資料處理、程式與計量分析力。</p>
+          <h3>產業與勞動</h3>
+          <p>理解產業結構、勞動市場與區域經濟。</p>
         </div>
         <div class="track-body">
           <div class="tag-row">
-            <span class="tag">Python</span>
-            <span class="tag">R</span>
-            <span class="tag">計量經濟</span>
+            <span class="tag">產業分析</span>
+            <span class="tag">勞動市場</span>
+            <span class="tag">區域研究</span>
           </div>
           <ul class="course-list">
-            <li>Python 基礎程式與經濟應用</li>
-            <li>機器學習與 Python</li>
-            <li>R 基礎程式與經濟應用</li>
-            <li>資料分析方法</li>
-            <li>數量經濟學導論與 R</li>
-            <li>計量經濟學</li>
-            <li>時間序列分析</li>
+            <li>區域經濟學</li>
+            <li>產業經濟學</li>
+            <li>勞動經濟學</li>
+            <li>海外經濟研究</li>
+            <li>亞洲經濟研究</li>
+            <li>校外實習(一)(二)(三)</li>
+            <li>職場溝通、倫理與職場權益</li>
+            <li>管理經濟專題</li>
           </ul>
         </div>
       </article>
@@ -626,10 +635,10 @@
 
     <section class="map-preview">
       <div class="section-title">
-        <h2>重新設計版課程地圖</h2>
-        <p>保留原本資訊，改成較清楚的四年路徑與四大分流。</p>
+        <h2>課程地圖</h2>
       </div>
-      <img src="course-map-redesign.svg" alt="東吳大學經濟學系學士班課程地圖重新設計版">
+      <a class="download" href="course-map-redesign.svg">下載課程地圖</a>
+      <img src="course-map-redesign.svg" alt="東吳大學經濟學系學士班課程地圖">
     </section>
 
     <p class="note">此頁為視覺與資訊架構示意，課程名稱依原課程地圖整理，正式上線前可再對照最新必選修科目表與學分規範。</p>

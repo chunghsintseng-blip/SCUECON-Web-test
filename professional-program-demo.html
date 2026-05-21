@@ -1,0 +1,704 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>東吳經濟學系｜學士班專業學程範例</title>
+  <style>
+    :root {
+      --ink: #18202f;
+      --muted: #667085;
+      --line: #d9dee8;
+      --paper: #ffffff;
+      --soft: #f6f8fb;
+      --brand: #1c3b7f;
+      --brand-dark: #142c61;
+      --brand-deep: #0b1835;
+      --link: #105389;
+      --gold: #b88a3d;
+      --blue: #105389;
+      --green: #4f7f74;
+      --teal: #2f758a;
+      --shadow: 0 14px 34px rgba(24, 32, 47, .08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--soft);
+      font-family: "Noto Sans TC", "Microsoft JhengHei", system-ui, sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .topbar {
+      border-bottom: 1px solid rgba(255, 255, 255, .18);
+      background: var(--brand-dark);
+      color: #fff;
+    }
+
+    .topbar-inner {
+      width: min(1160px, calc(100% - 40px));
+      min-height: 64px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      border: 2px solid rgba(255, 255, 255, .82);
+      display: grid;
+      place-items: center;
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .nav {
+      display: flex;
+      gap: 18px;
+      color: rgba(255, 255, 255, .82);
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    .nav a {
+      text-decoration: none;
+    }
+
+    .hero {
+      color: #fff;
+      background:
+        linear-gradient(90deg, rgba(11, 24, 53, .94), rgba(28, 59, 127, .78)),
+        url("https://www.scu.edu.tw/econ/images/top/main-img01.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero-inner {
+      width: min(1160px, calc(100% - 40px));
+      min-height: 330px;
+      margin: 0 auto;
+      padding: 56px 0 72px;
+      display: grid;
+      align-content: center;
+    }
+
+    .crumb {
+      margin-bottom: 20px;
+      color: rgba(255, 255, 255, .75);
+      font-size: 14px;
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 760px;
+      font-size: clamp(36px, 5vw, 64px);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    .hero p {
+      max-width: 720px;
+      margin: 18px 0 0;
+      color: rgba(255, 255, 255, .88);
+      font-size: 19px;
+    }
+
+    main {
+      width: min(1160px, calc(100% - 40px));
+      margin: -38px auto 72px;
+    }
+
+    .section,
+    .notice,
+    .program,
+    .process,
+    .resources {
+      background: var(--paper);
+      border: 1px solid var(--line);
+    }
+
+    .notice {
+      padding: 24px;
+      box-shadow: var(--shadow);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .notice h2,
+    .section-title h2 {
+      margin: 0;
+      font-size: 26px;
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+
+    .notice p,
+    .section-title p {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .btn,
+    .resource-link {
+      min-height: 40px;
+      padding: 0 16px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--brand);
+      background: var(--brand);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .section {
+      margin-top: 28px;
+      padding: 24px;
+    }
+
+    .section-title {
+      margin-bottom: 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 20px;
+    }
+
+    .program-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .program {
+      padding: 22px;
+      min-height: 292px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .program::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto;
+      height: 5px;
+      background: var(--blue);
+    }
+
+    .program.data::before {
+      background: var(--teal);
+    }
+
+    .program h3 {
+      margin: 0;
+      font-size: 24px;
+      letter-spacing: 0;
+    }
+
+    .program p {
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .program-meta {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .metric {
+      border: 1px solid #e7ebf2;
+      background: #fbfcfe;
+      padding: 14px;
+    }
+
+    .metric span {
+      display: block;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .metric strong {
+      display: block;
+      margin-top: 5px;
+      color: var(--brand);
+      font-size: 20px;
+      line-height: 1.3;
+    }
+
+    .detail-list {
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 10px;
+    }
+
+    .detail-list li {
+      padding-left: 18px;
+      position: relative;
+      color: #344054;
+      font-size: 15px;
+    }
+
+    .detail-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: .68em;
+      width: 7px;
+      height: 7px;
+      background: var(--gold);
+    }
+
+    .metric-course-groups {
+      margin-top: 10px;
+      display: grid;
+      gap: 10px;
+    }
+
+    .metric-course-group {
+      padding-top: 10px;
+      border-top: 1px solid #dcefee;
+    }
+
+    .metric-course-group b {
+      display: block;
+      color: var(--teal);
+      font-size: 14px;
+    }
+
+    .metric-course-group small {
+      display: block;
+      margin-top: 5px;
+      color: #344054;
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .metric-note {
+      margin: 12px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .process {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      overflow: hidden;
+    }
+
+    .step {
+      min-height: 154px;
+      padding: 20px;
+      border-right: 1px solid var(--line);
+      background: #fbfcfe;
+    }
+
+    .step:last-child {
+      border-right: 0;
+    }
+
+    .step em {
+      display: block;
+      color: var(--teal);
+      font-style: normal;
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .step strong {
+      display: block;
+      margin-top: 7px;
+      font-size: 19px;
+    }
+
+    .step span {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .rule-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .rule {
+      padding: 18px;
+      border: 1px solid #e7ebf2;
+      background: #fbfcfe;
+      min-height: 112px;
+    }
+
+    .rule strong {
+      display: block;
+      color: var(--brand);
+      font-size: 18px;
+    }
+
+    .rule p {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .resources {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      padding: 18px;
+    }
+
+    .resource-link {
+      min-height: 56px;
+      background: #f9f2e7;
+      border-color: #ead5b3;
+      color: #6f4c18;
+    }
+
+    .flow-card {
+      margin-top: 18px;
+      padding: 20px;
+      border: 1px solid var(--line);
+      background: #fbfcfe;
+    }
+
+    .flow-diagram {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+    }
+
+    .flow-node {
+      position: relative;
+      min-height: 138px;
+      padding: 18px;
+      border: 1px solid #dfe6ef;
+      background: #fff;
+    }
+
+    .flow-node:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -18px;
+      z-index: 2;
+      width: 22px;
+      height: 2px;
+      background: var(--gold);
+    }
+
+    .flow-node em {
+      display: inline-flex;
+      width: 30px;
+      height: 30px;
+      align-items: center;
+      justify-content: center;
+      background: var(--brand);
+      color: #fff;
+      font-style: normal;
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .flow-node strong {
+      display: block;
+      margin-top: 12px;
+      color: var(--ink);
+      font-size: 18px;
+    }
+
+    .flow-node span {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .note {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 960px) {
+      .program-grid,
+      .rule-grid,
+      .notice {
+        grid-template-columns: 1fr;
+      }
+
+      .process,
+      .flow-diagram,
+      .resources {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .flow-node:not(:last-child)::after {
+        display: none;
+      }
+
+      .step:nth-child(2) {
+        border-right: 0;
+      }
+
+      .step:nth-child(-n + 2) {
+        border-bottom: 1px solid var(--line);
+      }
+    }
+
+    @media (max-width: 620px) {
+      .topbar-inner,
+      .hero-inner,
+      main {
+        width: min(100% - 28px, 1160px);
+      }
+
+      .nav {
+        display: none;
+      }
+
+      .hero-inner {
+        min-height: 300px;
+        padding: 40px 0 64px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .section,
+      .notice {
+        padding: 18px;
+      }
+
+      .section-title {
+        display: block;
+      }
+
+      .program-meta,
+      .process,
+      .flow-diagram,
+      .resources {
+        grid-template-columns: 1fr;
+      }
+
+      .step,
+      .step:nth-child(2) {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .step:last-child {
+        border-bottom: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <div class="brand-mark">EC</div>
+        <div>東吳大學經濟學系</div>
+      </div>
+      <nav class="nav" aria-label="主要選單">
+        <a href="#" target="_blank" rel="noopener noreferrer">最新消息</a>
+        <a href="#" target="_blank" rel="noopener noreferrer">學系介紹</a>
+        <a href="#" target="_blank" rel="noopener noreferrer">課程資訊</a>
+        <a href="#" target="_blank" rel="noopener noreferrer">招生資訊</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="crumb">首頁 / 課程資訊 / 學士班 / 專業學程</div>
+      <h1>學士班專業學程</h1>
+      <p>經濟學系大學部選修課程設有財務金融與資料分析兩個專業學程，協助學生將選課、學習成果與職涯方向連成可申請證明的完整路徑。</p>
+    </div>
+  </section>
+
+  <main>
+    <section class="notice">
+      <div>
+        <h2>專業學程證明</h2>
+        <p>大學部課程各專業學程符合規定條件，即核發該專業學程證明。</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">
+        <div>
+          <h2>經濟學系學程</h2>
+          <p>以 18 學分選修架構搭配學習成果，讓專業能力能被清楚呈現。</p>
+        </div>
+      </div>
+      <div class="program-grid">
+        <article class="program finance">
+          <h3>財務金融學程</h3>
+          <p>適合想加強投資、金融市場與財務管理能力，並銜接金融相關職涯的學生。</p>
+          <div class="program-meta">
+            <div class="metric">
+              <span>學程必修</span>
+              <strong>投資學 3 學分</strong>
+            </div>
+            <div class="metric">
+              <span>學程選修</span>
+              <strong>15 學分</strong>
+            </div>
+          </div>
+          <ul class="detail-list">
+            <li>修滿財務金融領域課程要求。</li>
+            <li>完成得獎或通過模擬競賽，或取得 2 張財務金融相關證照。</li>
+          </ul>
+        </article>
+
+        <article class="program data">
+          <h3>資料分析學程</h3>
+          <p>適合想建立資料處理、程式語言、計量分析與競賽成果的學生。</p>
+          <div class="program-meta">
+            <div class="metric">
+              <span>學程必修</span>
+              <div class="metric-course-groups">
+                <div class="metric-course-group">
+                  <b>計量課程</b>
+                  <small>計量經濟學／大數據計量經濟學</small>
+                </div>
+                <div class="metric-course-group">
+                  <b>數據分析軟體</b>
+                  <small>Python 基礎程式與經濟應用／R 基礎程式與經濟應用</small>
+                </div>
+              </div>
+              <p class="metric-note">各分類課程二選一。</p>
+            </div>
+            <div class="metric">
+              <span>學程選修</span>
+              <strong>12 學分</strong>
+            </div>
+          </div>
+          <ul class="detail-list">
+            <li>修滿資料分析領域課程要求。</li>
+            <li>完成資料分析競賽、校外競賽得獎或取得認可之資料分析相關證照。</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">
+        <div>
+          <h2>取得學程證明流程</h2>
+          <p>修課與學習成果達標後，備妥資料向系辦公室提出申請，經核可後頒予學程證明。</p>
+        </div>
+      </div>
+      <div class="flow-card" aria-label="取得學程證明流程圖">
+        <div class="flow-diagram">
+          <div class="flow-node">
+            <em>01</em>
+            <strong>修畢課程</strong>
+            <span>確認學分數、指定課程與學程課程要求皆已完成。</span>
+          </div>
+          <div class="flow-node">
+            <em>02</em>
+            <strong>完成成果</strong>
+            <span>依學程規定完成競賽、得獎、模擬競賽或相關證照條件。</span>
+          </div>
+          <div class="flow-node">
+            <em>03</em>
+            <strong>準備文件</strong>
+            <span>填寫申請表，檢附成績單與成果或證照證明。</span>
+          </div>
+          <div class="flow-node">
+            <em>04</em>
+            <strong>送交審查</strong>
+            <span>將資料送交經濟學系辦公室，由系上進行資格審查。</span>
+          </div>
+          <div class="flow-node">
+            <em>05</em>
+            <strong>核發證明</strong>
+            <span>審查通過後，通知學生領取專業學程證明。</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">
+        <div>
+          <h2>注意事項</h2>
+          <p>實際課程與認定方式仍以學系公告為準。</p>
+        </div>
+      </div>
+      <div class="rule-grid">
+        <div class="rule">
+          <strong>適用對象</strong>
+          <p>自 109 學年度起學士班入學新生適用，學分之認定方式採從寬認定。</p>
+        </div>
+        <div class="rule">
+          <strong>校外實習認定</strong>
+          <p>需與資料分析相關的校外實習才可計入學分，由本系主任與資料分析小組召集人認定。</p>
+        </div>
+        <div class="rule">
+          <strong>上修碩士班課程</strong>
+          <p>部分學程課程為碩士班課程，可列入大學部畢業學分，相關細節請詢問系辦公室秘書。</p>
+        </div>
+        <div class="rule">
+          <strong>學分不得重複認抵</strong>
+          <p>資料分析學程與財務金融學程學分不得重複認抵。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">
+        <div>
+          <h2>附件入口</h2>
+          <p>申請前請以附件與學系最新公告確認完整規定。</p>
+        </div>
+      </div>
+      <div class="resources" aria-label="專業學程附件">
+        <a class="resource-link" href="https://drive.google.com/file/d/1-ZkE5FH1Povc3n2GAguewuzjeQwY_MDK/view?usp=drive_link" target="_blank" rel="noopener noreferrer">財務金融學程全攻略</a>
+        <a class="resource-link" href="https://docs.google.com/document/d/1U9H86SAJRvyiD7tW6S0Tq7WuX36LqA94/edit?ouid=117767920890804439811&rtpof=true&sd=true&usp=drive_link" target="_blank" rel="noopener noreferrer">財務金融學程申請表</a>
+        <a class="resource-link" href="https://drive.google.com/file/d/1tEqBjXwPhcIE_T1MBVww98OMDBQs1ShO/view?usp=drive_link" target="_blank" rel="noopener noreferrer">財務金融學程辦法</a>
+        <a class="resource-link" href="https://drive.google.com/file/d/1kLLaXrQdKgPHAW0Va_5OS-JOceeUASON/view?usp=drive_link" target="_blank" rel="noopener noreferrer">資料分析學程課程說明</a>
+        <a class="resource-link" href="https://docs.google.com/document/d/1LcKs6BkaDwqxeJiDevcIj9Ao4pCOtRG9/edit?ouid=117136011200863686481&rtpof=true&sd=true&usp=drive_link" target="_blank" rel="noopener noreferrer">資料分析學程申請表</a>
+      </div>
+      <p class="note">課程依實際開課情形為主。</p>
+    </section>
+  </main>
+</body>
+</html>

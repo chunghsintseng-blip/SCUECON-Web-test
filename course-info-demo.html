@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>東吳經濟學系｜課程資訊範例</title>
+  <style>
+    :root {
+      --ink: #18202f;
+      --muted: #667085;
+      --line: #d9dee8;
+      --paper: #ffffff;
+      --soft: #f6f8fb;
+      --brand: #1c3b7f;
+      --brand-dark: #142c61;
+      --brand-deep: #0b1835;
+      --gold: #b9862f;
+      --teal: #287d86;
+      --green: #4a7a4f;
+      --shadow: 0 18px 46px rgba(24, 32, 47, .10);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--soft);
+      font-family: "Noto Sans TC", "Microsoft JhengHei", system-ui, sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .topbar {
+      border-bottom: 1px solid rgba(255, 255, 255, .18);
+      background: var(--brand-dark);
+      color: #fff;
+    }
+
+    .topbar-inner {
+      width: min(1160px, calc(100% - 40px));
+      min-height: 64px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(255, 255, 255, .42);
+      color: #fff;
+      font-size: 14px;
+    }
+
+    .nav {
+      display: flex;
+      gap: 24px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .nav a {
+      color: rgba(255, 255, 255, .86);
+      text-decoration: none;
+    }
+
+    .nav a[aria-current="page"] {
+      color: #fff;
+    }
+
+    .hero {
+      color: #fff;
+      background:
+        linear-gradient(90deg, rgba(11, 24, 53, .94), rgba(28, 59, 127, .78)),
+        url("https://www.scu.edu.tw/econ/images/top/main-img01.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero-inner {
+      width: min(1160px, calc(100% - 40px));
+      min-height: 330px;
+      margin: 0 auto;
+      padding: 56px 0 72px;
+      display: grid;
+      align-content: center;
+    }
+
+    .crumb {
+      margin-bottom: 14px;
+      color: rgba(255, 255, 255, .72);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(36px, 5vw, 64px);
+      line-height: 1.12;
+      letter-spacing: 0;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 18px 0 0;
+      color: rgba(255, 255, 255, .88);
+      font-size: 19px;
+    }
+
+    main {
+      width: min(1160px, calc(100% - 40px));
+      margin: -38px auto 72px;
+    }
+
+    .section,
+    .notice,
+    .course-card,
+    .link-panel {
+      background: var(--paper);
+      border: 1px solid var(--line);
+    }
+
+    .notice {
+      padding: 24px;
+      box-shadow: var(--shadow);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .notice h2,
+    .section-title h2 {
+      margin: 0;
+      font-size: 26px;
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+
+    .notice p,
+    .section-title p {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .quick-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: flex-end;
+    }
+
+    .quick-links a {
+      min-height: 38px;
+      padding: 0 13px;
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid #dfe6ef;
+      color: var(--brand-dark);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .section {
+      margin-top: 28px;
+      padding: 24px;
+    }
+
+    .section-title {
+      margin-bottom: 18px;
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .course-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.18fr) minmax(0, .82fr);
+      gap: 16px;
+      align-items: stretch;
+    }
+
+    .course-card {
+      min-height: 100%;
+      padding: 22px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .course-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto;
+      height: 5px;
+      background: var(--brand);
+    }
+
+    .course-card.internship::before {
+      background: var(--green);
+    }
+
+    .course-card.required::before {
+      background: var(--gold);
+    }
+
+    .course-card.graduate::before {
+      background: var(--teal);
+    }
+
+    .course-card.doctoral::before {
+      background: #7a4f9a;
+    }
+
+    .course-card .label {
+      margin: 0 0 8px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .course-card h3 {
+      margin: 0;
+      font-size: 25px;
+      line-height: 1.3;
+      letter-spacing: 0;
+    }
+
+    .course-card p {
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .undergrad {
+      min-height: 428px;
+      display: grid;
+      grid-template-rows: auto 1fr;
+    }
+
+    .undergrad .entry-grid {
+      align-self: end;
+    }
+
+    .entry-grid {
+      margin-top: 22px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .entry {
+      min-height: 92px;
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 1px solid #e6ebf3;
+      background: #fbfcfe;
+      color: inherit;
+      text-decoration: none;
+      transition: border-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+    }
+
+    .entry:hover,
+    .entry:focus-visible {
+      transform: translateY(-2px);
+      border-color: rgba(28, 59, 127, .45);
+      box-shadow: 0 14px 30px rgba(24, 32, 47, .08);
+      outline: none;
+    }
+
+    .entry strong {
+      color: var(--brand-dark);
+      font-size: 18px;
+      line-height: 1.35;
+    }
+
+    .entry span {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .side-grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    .compact-links {
+      margin-top: 16px;
+      display: grid;
+      gap: 8px;
+    }
+
+    .compact-links a {
+      min-height: 42px;
+      padding: 9px 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      border: 1px solid #e6ebf3;
+      background: #fbfcfe;
+      color: var(--brand-dark);
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 900;
+    }
+
+    .compact-links a::after,
+    .entry::after {
+      content: ">";
+      color: var(--gold);
+      font-weight: 900;
+    }
+
+    .entry::after {
+      align-self: flex-end;
+      margin-top: 8px;
+    }
+
+    .secondary-grid {
+      margin-top: 16px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .link-panel {
+      min-height: 176px;
+      padding: 20px;
+    }
+
+    .link-panel h3 {
+      margin: 0;
+      font-size: 22px;
+      line-height: 1.3;
+      letter-spacing: 0;
+    }
+
+    .link-panel p {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .link-panel .compact-links {
+      margin-top: 14px;
+    }
+
+    @media (max-width: 960px) {
+      .notice,
+      .course-layout,
+      .secondary-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .quick-links {
+        justify-content: flex-start;
+      }
+
+      .undergrad {
+        min-height: 0;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .topbar-inner,
+      .hero-inner,
+      main {
+        width: min(100% - 28px, 1160px);
+      }
+
+      .nav {
+        display: none;
+      }
+
+      .hero-inner {
+        min-height: 300px;
+        padding: 40px 0 64px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .notice,
+      .section,
+      .course-card,
+      .link-panel {
+        padding: 18px;
+      }
+
+      .section-title {
+        display: block;
+      }
+
+      .entry-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <div class="brand-mark">EC</div>
+        <div>東吳大學經濟學系</div>
+      </div>
+      <nav class="nav" aria-label="主要選單">
+        <a href="#" target="_blank" rel="noopener noreferrer">最新消息</a>
+        <a href="#" target="_blank" rel="noopener noreferrer">學系介紹</a>
+        <a href="course-info-demo.html" target="_blank" rel="noopener noreferrer" aria-current="page">課程資訊</a>
+        <a href="admission-undergrad-demo.html" target="_blank" rel="noopener noreferrer">招生資訊</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="crumb">首頁 / 課程資訊</div>
+      <h1>課程資訊</h1>
+      <p>整理經濟學系各學制課程規劃、必選修科目表、學程與修課資訊，協助學生快速找到需要的學習資源。</p>
+    </div>
+  </section>
+
+  <main>
+    <section class="notice">
+      <div>
+        <h2>課程規劃總覽</h2>
+        <p>依學制與主題整理課程相關入口。</p>
+      </div>
+      <div class="quick-links" aria-label="課程資訊快速入口">
+        <a href="#undergrad">學士班</a>
+        <a href="#graduate">碩博士班</a>
+        <a href="#required">必選修科目表</a>
+        <a href="#internship">校外實習</a>
+      </div>
+    </section>
+
+    <section class="section" id="undergrad">
+      <div class="section-title">
+        <div>
+          <h2>各學制課程資訊</h2>
+        </div>
+      </div>
+
+      <div class="course-layout">
+        <article class="course-card undergrad">
+          <div>
+            <p class="label">Undergraduate</p>
+            <h3>學士班</h3>
+            <p>整合大學部課程特色、專業學程、課程地圖與修課須知，協助學生安排四年學習路徑。</p>
+          </div>
+          <div class="entry-grid">
+            <a class="entry" href="professional-program-demo.html" target="_blank" rel="noopener noreferrer">
+              <strong>專業學程</strong>
+              <span>財務金融與資料分析兩個專業學程。</span>
+            </a>
+            <a class="entry" href="course-feature-demo.html" target="_blank" rel="noopener noreferrer">
+              <strong>課程特色</strong>
+              <span>教學目標、課程特色與能力培養方向。</span>
+            </a>
+            <a class="entry" href="course-map-demo.html" target="_blank" rel="noopener noreferrer">
+              <strong>課程地圖</strong>
+              <span>四年課程安排、分流與職涯進路。</span>
+            </a>
+            <a class="entry" href="undergrad-course-guide-demo.html" target="_blank" rel="noopener noreferrer">
+              <strong>大學部修課須知</strong>
+              <span>修課規定、先修碩士班課程與相關表單。</span>
+            </a>
+          </div>
+        </article>
+
+        <div class="side-grid">
+          <article class="course-card graduate" id="graduate">
+            <p class="label">Graduate</p>
+            <h3>碩士班</h3>
+            <p>碩士班必選修科目表、課群規劃、畢業規定與論文相關資訊。</p>
+            <div class="compact-links">
+              <a href="master-course-guide-demo.html" target="_blank" rel="noopener noreferrer">碩士班修課須知</a>
+            </div>
+          </article>
+
+          <article class="course-card doctoral">
+            <p class="label">Doctoral</p>
+            <h3>博士班</h3>
+            <p>博士班修課規定、資格考核、論文與相關表單資訊。</p>
+            <div class="compact-links">
+              <a href="doctoral-course-guide-demo.html" target="_blank" rel="noopener noreferrer">博士班修課須知</a>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="secondary-grid">
+        <article class="link-panel required" id="required">
+          <h3>必選修科目表</h3>
+          <p>查詢各學年度入學學生適用之必修、選修與畢業學分規定。</p>
+          <div class="compact-links">
+            <a href="https://www.scu.edu.tw/~curr/p3-2cos.htm" target="_blank" rel="noopener noreferrer">必選修科目表</a>
+          </div>
+        </article>
+
+        <article class="link-panel internship" id="internship">
+          <h3>本系校外實習課程</h3>
+          <p>實習公告與學生實習經驗整理。</p>
+          <div class="compact-links">
+            <a href="https://web-ch.scu.edu.tw/econ/opinion/6316" target="_blank" rel="noopener noreferrer">校外實習課程</a>
+            <a href="https://web-ch.scu.edu.tw/econ/web_page/15396" target="_blank" rel="noopener noreferrer">校外實習分享</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

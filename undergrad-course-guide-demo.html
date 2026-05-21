@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>東吳經濟學系｜大學部修課須知範例</title>
+  <style>
+    :root {
+      --ink: #18202f;
+      --muted: #667085;
+      --line: #d9dee8;
+      --paper: #ffffff;
+      --soft: #f6f8fb;
+      --brand: #1c3b7f;
+      --brand-dark: #142c61;
+      --brand-deep: #0b1835;
+      --gold: #b9862f;
+      --teal: #287d86;
+      --green: #4a7a4f;
+      --shadow: 0 18px 46px rgba(24, 32, 47, .10);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--soft);
+      font-family: "Noto Sans TC", "Microsoft JhengHei", system-ui, sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .topbar {
+      border-bottom: 1px solid rgba(255, 255, 255, .18);
+      background: var(--brand-dark);
+      color: #fff;
+    }
+
+    .topbar-inner {
+      width: min(1160px, calc(100% - 40px));
+      min-height: 64px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(255, 255, 255, .42);
+      color: #fff;
+      font-size: 14px;
+    }
+
+    .nav {
+      display: flex;
+      gap: 24px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .nav a {
+      color: rgba(255, 255, 255, .86);
+      text-decoration: none;
+    }
+
+    .nav a[aria-current="page"] {
+      color: #fff;
+    }
+
+    .hero {
+      color: #fff;
+      background:
+        linear-gradient(90deg, rgba(11, 24, 53, .94), rgba(28, 59, 127, .78)),
+        url("https://www.scu.edu.tw/econ/images/top/main-img01.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero-inner {
+      width: min(1160px, calc(100% - 40px));
+      min-height: 330px;
+      margin: 0 auto;
+      padding: 56px 0 72px;
+      display: grid;
+      align-content: center;
+    }
+
+    .crumb {
+      margin-bottom: 14px;
+      color: rgba(255, 255, 255, .72);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(36px, 5vw, 64px);
+      line-height: 1.12;
+      letter-spacing: 0;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 18px 0 0;
+      color: rgba(255, 255, 255, .88);
+      font-size: 19px;
+    }
+
+    main {
+      width: min(1160px, calc(100% - 40px));
+      margin: -38px auto 72px;
+    }
+
+    .notice,
+    .section,
+    .guide-card,
+    .subnav {
+      background: var(--paper);
+      border: 1px solid var(--line);
+    }
+
+    .notice {
+      padding: 24px;
+      box-shadow: var(--shadow);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .notice h2,
+    .section-title h2 {
+      margin: 0;
+      font-size: 26px;
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+
+    .notice p,
+    .section-title p {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .quick-links,
+    .subnav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .quick-links {
+      justify-content: flex-end;
+    }
+
+    .quick-links a,
+    .subnav a {
+      min-height: 38px;
+      padding: 0 13px;
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid #dfe6ef;
+      color: var(--brand-dark);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .subnav {
+      margin-top: 16px;
+      padding: 12px;
+    }
+
+    .subnav a[aria-current="page"] {
+      border-color: var(--brand);
+      background: var(--brand);
+      color: #fff;
+    }
+
+    .section {
+      margin-top: 28px;
+      padding: 24px;
+    }
+
+    .section-title {
+      margin-bottom: 18px;
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .guide-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .guide-card {
+      min-height: 100%;
+      padding: 22px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .guide-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto;
+      height: 5px;
+      background: var(--brand);
+    }
+
+    .guide-card.gold::before {
+      background: var(--gold);
+    }
+
+    .guide-card.teal::before {
+      background: var(--teal);
+    }
+
+    .guide-card.green::before {
+      background: var(--green);
+    }
+
+    .guide-card h3 {
+      margin: 0;
+      color: var(--brand-dark);
+      font-size: 23px;
+      line-height: 1.35;
+      letter-spacing: 0;
+    }
+
+    .guide-card p {
+      margin: 9px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .link-list {
+      margin-top: 16px;
+      display: grid;
+      gap: 8px;
+    }
+
+    .link-list a {
+      min-height: 42px;
+      padding: 9px 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      border: 1px solid #e6ebf3;
+      background: #fbfcfe;
+      color: var(--brand-dark);
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 900;
+    }
+
+    .link-list a::after {
+      content: ">";
+      flex: 0 0 auto;
+      color: var(--gold);
+      font-weight: 900;
+    }
+
+    @media (max-width: 960px) {
+      .notice,
+      .guide-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .quick-links {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .topbar-inner,
+      .hero-inner,
+      main {
+        width: min(100% - 28px, 1160px);
+      }
+
+      .nav {
+        display: none;
+      }
+
+      .hero-inner {
+        min-height: 300px;
+        padding: 40px 0 64px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .notice,
+      .section,
+      .guide-card {
+        padding: 18px;
+      }
+
+      .section-title {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <div class="brand-mark">EC</div>
+        <div>東吳大學經濟學系</div>
+      </div>
+      <nav class="nav" aria-label="主要選單">
+        <a href="#" target="_blank" rel="noopener noreferrer">最新消息</a>
+        <a href="#" target="_blank" rel="noopener noreferrer">學系介紹</a>
+        <a href="course-info-demo.html" target="_blank" rel="noopener noreferrer" aria-current="page">課程資訊</a>
+        <a href="admission-undergrad-demo.html" target="_blank" rel="noopener noreferrer">招生資訊</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="crumb">首頁 / 課程資訊 / 學士班 / 大學部修課須知</div>
+      <h1>大學部修課須知</h1>
+      <p>整理學士班課程辦法、選課須知、課程查詢、先修碩士班課程與畢業標準等常用入口。</p>
+    </div>
+  </section>
+
+  <main>
+    <section class="notice">
+      <div>
+        <h2>修課資料總覽</h2>
+        <p>依使用情境分類，快速找到學士班修課、選課與畢業相關文件。</p>
+      </div>
+      <div class="quick-links" aria-label="修課須知快速入口">
+        <a href="#rules">課程辦法</a>
+        <a href="#selection">選課須知</a>
+        <a href="#lookup">課程查詢</a>
+        <a href="#master">先修碩士班</a>
+      </div>
+    </section>
+
+    <nav class="subnav" aria-label="學士班課程分頁">
+      <a href="professional-program-demo.html" target="_blank" rel="noopener noreferrer">專業學程</a>
+      <a href="course-feature-demo.html" target="_blank" rel="noopener noreferrer">課程特色</a>
+      <a href="course-map-demo.html" target="_blank" rel="noopener noreferrer">課程地圖</a>
+      <a href="undergrad-course-guide-demo.html" target="_blank" rel="noopener noreferrer" aria-current="page">大學部修課須知</a>
+    </nav>
+
+    <section class="section">
+      <div class="section-title">
+        <div>
+          <h2>常用文件入口</h2>
+        </div>
+      </div>
+      <div class="guide-grid">
+        <article class="guide-card" id="rules">
+          <h3>課程相關辦法</h3>
+          <p>學習評量、總結性課程與競賽貢獻等規定文件。</p>
+          <div class="link-list">
+            <a href="http://www.scu.edu.tw/econ/class/9/econclass9-3-20200810.pdf" target="_blank" rel="noopener noreferrer">經濟學系學士班學生學習評量辦法</a>
+            <a href="http://www.scu.edu.tw/econ/class/9/econclass9-5-20210605.pdf" target="_blank" rel="noopener noreferrer">總結性課程辦法</a>
+            <a href="http://www.scu.edu.tw/econ/class/9/econclass9-20200810.pdf" target="_blank" rel="noopener noreferrer">總結性課程畢業標準驗證申請表</a>
+            <a href="http://www.scu.edu.tw/econ/class/econclass5-new.docx" target="_blank" rel="noopener noreferrer">非本系競賽貢獻說明書</a>
+          </div>
+        </article>
+
+        <article class="guide-card teal" id="lookup">
+          <h3>課程查詢與摘要</h3>
+          <p>課程摘要、授課計畫與輔系科目學分資料。</p>
+          <div class="link-list">
+            <a href="http://www.scu.edu.tw/econ/class/9/econclass9-1-20200810.pdf" target="_blank" rel="noopener noreferrer">學士班中英文課程摘要</a>
+            <a href="http://www.scu.edu.tw/econ/class/1/i002.htm" target="_blank" rel="noopener noreferrer">中英文課程摘要</a>
+            <a href="http://web.sys.scu.edu.tw/class40.asp?option=1" target="_blank" rel="noopener noreferrer">授課計畫表查詢</a>
+            <a href="http://www.scu.edu.tw/~curr/p3-2cos.htm" target="_blank" rel="noopener noreferrer">輔系科目學分表</a>
+          </div>
+        </article>
+
+        <article class="guide-card gold" id="selection">
+          <h3>大學部選課須知</h3>
+          <p>各入學年度適用之選課須知文件。</p>
+          <div class="link-list">
+            <a href="https://drive.google.com/file/d/1p8CjNAMEy3Nb_Xj1UlYU6zzo5J73ZBS-/view?usp=drive_link" target="_blank" rel="noopener noreferrer">114 大學部選課須知</a>
+            <a href="https://drive.google.com/file/d/1pBuRY8a4J8A3jkfXtA5Q2VNAFT9xjDGP/view?usp=drive_link" target="_blank" rel="noopener noreferrer">113 大學部選課須知</a>
+            <a href="https://drive.google.com/file/d/1qOYJ5p8UQPB77RW9bTFxAWMfWIV-Hbtf/view?usp=drive_link" target="_blank" rel="noopener noreferrer">112 大學部選課須知</a>
+            <a href="https://drive.google.com/file/d/1Nxc82KWkF3N8eStrBUQSdWw16Lki1hOA/view?usp=sharing" target="_blank" rel="noopener noreferrer">111 大學部選課須知</a>
+            <a href="http://www.scu.edu.tw/econ/class/10/class-110attention-1.pdf" target="_blank" rel="noopener noreferrer">110 大學部選課須知</a>
+            <a href="http://www.scu.edu.tw/econ/class/9/class-109attention-1.pdf" target="_blank" rel="noopener noreferrer">109 大學部選課須知</a>
+            <a href="http://www.scu.edu.tw/econ/class/1/108attention-1.pdf" target="_blank" rel="noopener noreferrer">108 大學部選課須知</a>
+          </div>
+        </article>
+
+        <article class="guide-card green" id="master">
+          <h3>先修碩士班課程與畢業標準</h3>
+          <p>先修碩士班課程申請資料，以及校級畢業標準資訊。</p>
+          <div class="link-list">
+            <a href="https://drive.google.com/file/d/1T3ABJG1Va-w0iqsTNR32kUMwikyziNFO/view?usp=drive_link" target="_blank" rel="noopener noreferrer">經濟學系學士生先修碩士班課程辦法</a>
+            <a href="https://docs.google.com/document/d/11nW1EuvZiZz4GC6qgOVPRCh7JkhEaFpN/edit?usp=drive_link&amp;ouid=117767920890804439811&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener noreferrer">經濟學系學士生先修碩士班課程申請表</a>
+            <a href="https://web-ch.scu.edu.tw/index.php/generaledu/web_page/5081" target="_blank" rel="noopener noreferrer">畢業標準</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
