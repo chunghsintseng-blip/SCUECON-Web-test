@@ -222,14 +222,13 @@
     }
 
     .goal {
-      min-height: 154px;
-      padding: 20px;
+      min-height: 200px;
+      padding: 28px 24px 24px;
       position: relative;
       overflow: hidden;
     }
 
-    .goal::before,
-    .feature-card::before {
+    .goal::before {
       content: "";
       position: absolute;
       inset: 0 0 auto;
@@ -237,41 +236,67 @@
       background: var(--brand);
     }
 
-    .goal:nth-child(2)::before,
-    .feature-card.teal::before {
+    .goal:nth-child(2)::before {
       background: var(--teal);
     }
 
-    .goal:nth-child(3)::before,
-    .feature-card.gold::before {
+    .goal:nth-child(3)::before {
       background: var(--gold);
     }
 
-    .feature-card.green::before {
-      background: var(--green);
+    .goal .badge {
+      display: inline-flex;
+      width: 56px;
+      height: 56px;
+      align-items: center;
+      justify-content: center;
+      background: var(--brand);
+      color: #fff;
+      font-size: 22px;
+      font-weight: 900;
+      letter-spacing: .02em;
+      border-radius: 50%;
+      margin-bottom: 14px;
     }
 
-    .goal em {
-      display: block;
-      color: var(--gold);
-      font-style: normal;
-      font-size: 13px;
-      font-weight: 900;
+    .goal:nth-child(2) .badge {
+      background: var(--teal);
+    }
+
+    .goal:nth-child(3) .badge {
+      background: var(--gold);
     }
 
     .goal strong {
       display: block;
-      margin-top: 8px;
       color: var(--brand-dark);
       font-size: 22px;
       line-height: 1.35;
     }
 
-    .goal span {
+    .goal span:not(.badge) {
       display: block;
       margin-top: 10px;
       color: var(--muted);
       font-size: 14px;
+    }
+
+    .section-no {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--gold);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: .14em;
+    }
+
+    .section.graduate {
+      background: linear-gradient(180deg, #f1f4fa 0%, var(--paper) 100%);
+      border-color: #dde3ec;
+    }
+
+    .section.graduate .feature-card {
+      background: var(--paper);
     }
 
     .feature-grid {
@@ -280,21 +305,36 @@
 
     .feature-card {
       min-height: 210px;
-      padding: 22px;
-      position: relative;
+      padding: 0;
       overflow: hidden;
+      display: flex;
+      flex-direction: column;
     }
 
-    .feature-card h3 {
+    .feature-head {
+      padding: 18px 22px;
+      background: var(--brand);
+      color: #fff;
+    }
+
+    .feature-card.teal .feature-head { background: var(--teal); }
+    .feature-card.gold .feature-head { background: var(--gold); }
+    .feature-card.green .feature-head { background: var(--green); }
+
+    .feature-head h3 {
       margin: 0;
-      color: var(--brand-dark);
+      color: #fff;
       font-size: 22px;
       line-height: 1.35;
       letter-spacing: 0;
     }
 
-    .feature-card p {
-      margin: 12px 0 0;
+    .feature-body {
+      padding: 22px;
+    }
+
+    .feature-body p {
+      margin: 0;
       color: var(--muted);
       font-size: 15px;
     }
@@ -345,8 +385,15 @@
 
       .notice,
       .section,
-      .feature-card,
       .goal {
+        padding: 18px;
+      }
+
+      .feature-head {
+        padding: 16px 18px;
+      }
+
+      .feature-body {
         padding: 18px;
       }
 
@@ -398,23 +445,24 @@
     <section class="section">
       <div class="section-title">
         <div>
+          <span class="section-no">01 / GOALS</span>
           <h2>教學目標</h2>
           <p>對應經濟學系培育學生的三個核心方向。</p>
         </div>
       </div>
       <div class="goal-grid">
         <article class="goal">
-          <em>01</em>
+          <span class="badge">01</span>
           <strong>建立經濟理論與數量分析基礎</strong>
           <span>先打穩個體、總體、統計、計量與數理工具，形成後續分析能力。</span>
         </article>
         <article class="goal">
-          <em>02</em>
+          <span class="badge">02</span>
           <strong>加強經濟學在各領域之運用</strong>
           <span>把經濟思維帶到財務金融、產業、公共政策與資料分析等場域。</span>
         </article>
         <article class="goal">
-          <em>03</em>
+          <span class="badge">03</span>
           <strong>培育具國際觀之經濟分析人才</strong>
           <span>透過語言、專業閱讀與國際經濟議題，建立跨國視野。</span>
         </article>
@@ -424,72 +472,90 @@
     <section class="section">
       <div class="section-title">
         <div>
+          <span class="section-no">02 / UNDERGRADUATE</span>
           <h2>大學部課程特色與優勢</h2>
           <p>從基礎訓練走向實務應用，並提供課後學習支持。</p>
         </div>
       </div>
       <div class="feature-grid">
         <article class="feature-card">
-          <h3>理論為基，應用為輔</h3>
-          <p>課程先建立扎實的經濟理論，再搭配實務與應用課程，讓分析能力能接上真實問題。</p>
-          <div class="tag-row">
-            <span class="tag">經濟理論</span>
-            <span class="tag">應用課程</span>
+          <div class="feature-head"><h3>理論為基，應用為輔</h3></div>
+          <div class="feature-body">
+            <p>課程先建立扎實的經濟理論，再搭配實務與應用課程，讓分析能力能接上真實問題。</p>
+            <div class="tag-row">
+              <span class="tag">經濟理論</span>
+              <span class="tag">應用課程</span>
+            </div>
           </div>
         </article>
         <article class="feature-card teal">
-          <h3>統計計量與數理訓練</h3>
-          <p>透過統計學、計量經濟學、財經資料庫應用與分析、數理經濟學等課程，強化資料分析與量化能力。</p>
-          <div class="tag-row">
-            <span class="tag">統計學</span>
-            <span class="tag">計量經濟學</span>
-            <span class="tag">數理經濟學</span>
+          <div class="feature-head"><h3>統計計量與數理訓練</h3></div>
+          <div class="feature-body">
+            <p>透過統計學、計量經濟學、財經資料庫應用與分析、數理經濟學等課程，強化資料分析與量化能力。</p>
+            <div class="tag-row">
+              <span class="tag">統計學</span>
+              <span class="tag">計量經濟學</span>
+              <span class="tag">數理經濟學</span>
+            </div>
           </div>
         </article>
         <article class="feature-card gold">
-          <h3>多元應用與實務課程</h3>
-          <p>基礎理論之外，開設商業銀行經營、財經新聞、財經英文、證券投資與理財分析等課程，兼顧升學與就業需求。</p>
-          <div class="tag-row">
-            <span class="tag">財務金融</span>
-            <span class="tag">財經英文</span>
-            <span class="tag">證券投資</span>
+          <div class="feature-head"><h3>多元應用與實務課程</h3></div>
+          <div class="feature-body">
+            <p>基礎理論之外，開設商業銀行經營、財經新聞、財經英文、證券投資與理財分析等課程，兼顧升學與就業需求。</p>
+            <div class="tag-row">
+              <span class="tag">財務金融</span>
+              <span class="tag">財經英文</span>
+              <span class="tag">證券投資</span>
+            </div>
           </div>
         </article>
         <article class="feature-card green">
-          <h3>助教與課後輔導</h3>
-          <p>基礎與困難課程搭配演習課與課後輔導，並有專任助教支援學生學習。</p>
-          <div class="tag-row">
-            <span class="tag">演習課</span>
-            <span class="tag">課後輔導</span>
-            <span class="tag">專任助教</span>
+          <div class="feature-head"><h3>助教與課後輔導</h3></div>
+          <div class="feature-body">
+            <p>基礎與困難課程搭配演習課與課後輔導，並有專任助教支援學生學習。</p>
+            <div class="tag-row">
+              <span class="tag">演習課</span>
+              <span class="tag">課後輔導</span>
+              <span class="tag">專任助教</span>
+            </div>
           </div>
         </article>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section graduate">
       <div class="section-title">
         <div>
+          <span class="section-no">03 / GRADUATE</span>
           <h2>研究所課程特色與優勢</h2>
           <p>研究所課程延伸進階理論、專業領域與研究寫作能力。</p>
         </div>
       </div>
       <div class="feature-grid">
         <article class="feature-card">
-          <h3>進階經濟理論基礎</h3>
-          <p>碩士班以個體、總體與計量經濟學作為核心訓練，並可銜接博士班相關進階課程。</p>
+          <div class="feature-head"><h3>進階經濟理論基礎</h3></div>
+          <div class="feature-body">
+            <p>碩士班以個體、總體與計量經濟學作為核心訓練，並可銜接博士班相關進階課程。</p>
+          </div>
         </article>
         <article class="feature-card teal">
-          <h3>專兼任師資深化教學</h3>
-          <p>除專任師資外，也邀請具研究表現與專業經驗的學者開課，拓展研究所教學內涵。</p>
+          <div class="feature-head"><h3>專兼任師資深化教學</h3></div>
+          <div class="feature-body">
+            <p>除專任師資外，也邀請具研究表現與專業經驗的學者開課，拓展研究所教學內涵。</p>
+          </div>
         </article>
         <article class="feature-card gold">
-          <h3>多樣經濟專業理論課程</h3>
-          <p>涵蓋經濟學方法論、制度經濟學、實驗經濟學、區域經濟學、運輸經濟學、技術與網路經濟學等領域。</p>
+          <div class="feature-head"><h3>多樣經濟專業理論課程</h3></div>
+          <div class="feature-body">
+            <p>涵蓋經濟學方法論、制度經濟學、實驗經濟學、區域經濟學、運輸經濟學、技術與網路經濟學等領域。</p>
+          </div>
         </article>
         <article class="feature-card green">
-          <h3>專題討論與論文寫作訓練</h3>
-          <p>透過專題討論、研究成果分享與論文寫作訓練，培養學生進行理論與實證研究的能力。</p>
+          <div class="feature-head"><h3>專題討論與論文寫作訓練</h3></div>
+          <div class="feature-body">
+            <p>透過專題討論、研究成果分享與論文寫作訓練，培養學生進行理論與實證研究的能力。</p>
+          </div>
         </article>
       </div>
     </section>

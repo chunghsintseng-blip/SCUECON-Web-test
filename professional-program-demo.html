@@ -132,7 +132,7 @@
     .notice,
     .program,
     .process,
-    .resources,
+    .guide-card,
     .subnav {
       background: var(--paper);
       border: 1px solid var(--line);
@@ -198,8 +198,7 @@
       font-size: 15px;
     }
 
-    .btn,
-    .resource-link {
+    .btn {
       min-height: 40px;
       padding: 0 16px;
       display: inline-flex;
@@ -412,23 +411,72 @@
       font-size: 14px;
     }
 
-    .resources {
+    .guide-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-      padding: 18px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
     }
 
-    .resource-link {
-      min-height: 56px;
-      background: #f9f2e7;
-      border-color: #ead5b3;
-      color: #6f4c18;
+    .guide-card {
+      padding: 22px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .guide-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto;
+      height: 5px;
+      background: var(--blue);
+    }
+
+    .guide-card.teal::before { background: var(--teal); }
+
+    .guide-card h3 {
+      margin: 0;
+      color: var(--brand-dark);
+      font-size: 22px;
+      letter-spacing: 0;
+    }
+
+    .guide-card p {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .link-list {
+      margin-top: 14px;
+      display: grid;
+      gap: 8px;
+    }
+
+    .link-list a {
+      min-height: 42px;
+      padding: 9px 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      border: 1px solid #e6ebf3;
+      background: #fbfcfe;
+      color: var(--brand-dark);
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 900;
       transition: border-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
     }
 
-    .resource-link:hover,
-    .resource-link:focus-visible {
+    .link-list a::after {
+      content: ">";
+      flex: 0 0 auto;
+      color: var(--gold);
+      font-weight: 900;
+    }
+
+    .link-list a:hover,
+    .link-list a:focus-visible {
       transform: translateY(-2px);
       border-color: rgba(28, 59, 127, .45);
       box-shadow: 0 14px 30px rgba(24, 32, 47, .08);
@@ -590,8 +638,8 @@
 
       .process,
       .flow-diagram,
-      .resources {
-        grid-template-columns: repeat(2, 1fr);
+      .guide-grid {
+        grid-template-columns: 1fr;
       }
 
       .flow-node:not(:last-child)::after {
@@ -638,8 +686,7 @@
 
       .program-meta,
       .process,
-      .flow-diagram,
-      .resources {
+      .flow-diagram {
         grid-template-columns: 1fr;
       }
 
@@ -927,12 +974,25 @@
           <p>申請前請以相關文件與學系最新公告確認完整規定。</p>
         </div>
       </div>
-      <div class="resources" aria-label="專業學程相關文件">
-        <a class="resource-link" href="https://drive.google.com/file/d/1-ZkE5FH1Povc3n2GAguewuzjeQwY_MDK/view?usp=drive_link" target="_blank" rel="noopener noreferrer">財務金融學程全攻略</a>
-        <a class="resource-link" href="https://docs.google.com/document/d/1U9H86SAJRvyiD7tW6S0Tq7WuX36LqA94/edit?ouid=117767920890804439811&rtpof=true&sd=true&usp=drive_link" target="_blank" rel="noopener noreferrer">財務金融學程申請表</a>
-        <a class="resource-link" href="https://drive.google.com/file/d/1tEqBjXwPhcIE_T1MBVww98OMDBQs1ShO/view?usp=drive_link" target="_blank" rel="noopener noreferrer">財務金融學程辦法</a>
-        <a class="resource-link" href="https://drive.google.com/file/d/1kLLaXrQdKgPHAW0Va_5OS-JOceeUASON/view?usp=drive_link" target="_blank" rel="noopener noreferrer">資料分析學程課程說明</a>
-        <a class="resource-link" href="https://docs.google.com/document/d/1LcKs6BkaDwqxeJiDevcIj9Ao4pCOtRG9/edit?ouid=117136011200863686481&rtpof=true&sd=true&usp=drive_link" target="_blank" rel="noopener noreferrer">資料分析學程申請表</a>
+      <div class="guide-grid">
+        <article class="guide-card">
+          <h3>財務金融學程</h3>
+          <p>學程全攻略、申請表與辦法。</p>
+          <div class="link-list">
+            <a href="https://drive.google.com/file/d/1-ZkE5FH1Povc3n2GAguewuzjeQwY_MDK/view?usp=drive_link" target="_blank" rel="noopener noreferrer">財務金融學程全攻略</a>
+            <a href="https://docs.google.com/document/d/1U9H86SAJRvyiD7tW6S0Tq7WuX36LqA94/edit?ouid=117767920890804439811&amp;rtpof=true&amp;sd=true&amp;usp=drive_link" target="_blank" rel="noopener noreferrer">財務金融學程申請表</a>
+            <a href="https://drive.google.com/file/d/1tEqBjXwPhcIE_T1MBVww98OMDBQs1ShO/view?usp=drive_link" target="_blank" rel="noopener noreferrer">財務金融學程辦法</a>
+          </div>
+        </article>
+
+        <article class="guide-card teal">
+          <h3>資料分析學程</h3>
+          <p>學程課程說明與申請表。</p>
+          <div class="link-list">
+            <a href="https://drive.google.com/file/d/1kLLaXrQdKgPHAW0Va_5OS-JOceeUASON/view?usp=drive_link" target="_blank" rel="noopener noreferrer">資料分析學程課程說明</a>
+            <a href="https://docs.google.com/document/d/1LcKs6BkaDwqxeJiDevcIj9Ao4pCOtRG9/edit?ouid=117136011200863686481&amp;rtpof=true&amp;sd=true&amp;usp=drive_link" target="_blank" rel="noopener noreferrer">資料分析學程申請表</a>
+          </div>
+        </article>
       </div>
       <p class="note">課程依實際開課情形為主。</p>
     </section>
