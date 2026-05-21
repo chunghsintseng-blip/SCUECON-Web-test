@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>東吳經濟學系｜學士班招生資訊範例</title>
+  <title>東吳經濟學系｜碩士班招生資訊範例</title>
   <style>
     :root {
       --ink: #18202f;
@@ -16,8 +16,6 @@
       --brand-deep: #0b1835;
       --link: #105389;
       --gold: #b88a3d;
-      --blue: #105389;
-      --green: #4f7f74;
       --teal: #2f758a;
       --shadow: 0 16px 38px rgba(24, 32, 47, .1);
     }
@@ -58,7 +56,6 @@
       align-items: center;
       gap: 12px;
       font-weight: 800;
-      letter-spacing: 0;
     }
 
     .brand-mark {
@@ -89,9 +86,9 @@
 
     .hero-inner {
       width: min(1160px, calc(100% - 40px));
-      min-height: 420px;
+      min-height: 360px;
       margin: 0 auto;
-      padding: 58px 0 88px;
+      padding: 58px 0 76px;
       display: grid;
       align-content: center;
     }
@@ -110,7 +107,7 @@
     }
 
     .hero p {
-      max-width: 680px;
+      max-width: 720px;
       margin: 18px 0 0;
       color: rgba(255, 255, 255, .9);
       font-size: 19px;
@@ -143,12 +140,10 @@
 
     main {
       width: min(1160px, calc(100% - 40px));
-      margin: -46px auto 76px;
+      margin: -38px auto 76px;
     }
 
-    .card,
     .section,
-    .cta,
     .subnav {
       background: var(--paper);
       border: 1px solid var(--line);
@@ -236,16 +231,14 @@
       font-size: 15px;
     }
 
-    .audience-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
-    }
-
     .quota-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 14px;
+    }
+
+    .quota-grid.two-col {
+      grid-template-columns: repeat(2, 1fr);
     }
 
     .quota {
@@ -291,41 +284,6 @@
       font-weight: 900;
     }
 
-    .card {
-      padding: 22px;
-      min-height: 220px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .card::before {
-      content: "";
-      position: absolute;
-      inset: 0 0 auto;
-      height: 5px;
-      background: var(--blue);
-    }
-
-    .card.transfer::before {
-      background: var(--brand);
-    }
-
-    .card.other::before {
-      background: var(--green);
-    }
-
-    .card h3 {
-      margin: 0;
-      font-size: 22px;
-      letter-spacing: 0;
-    }
-
-    .card p {
-      margin: 10px 0 0;
-      color: var(--muted);
-      font-size: 15px;
-    }
-
     .link-row {
       display: flex;
       flex-wrap: wrap;
@@ -345,105 +303,47 @@
       font-weight: 800;
     }
 
-    .why-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
-    }
-
-    .why {
-      padding: 18px;
-      border: 1px solid #e7ebf2;
-      background: #fbfcfe;
-      min-height: 174px;
-    }
-
-    .why .number {
-      color: var(--link);
-      font-size: 14px;
-      font-weight: 900;
-    }
-
-    .why strong {
-      display: block;
-      margin-top: 8px;
-      font-size: 18px;
-      line-height: 1.35;
-    }
-
-    .why p {
-      margin: 8px 0 0;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .learning {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 12px;
-    }
-
-    .step {
-      border: 1px solid var(--line);
-      background: #fbfcfe;
-      padding: 18px;
-      min-height: 138px;
-    }
-
-    .step em {
-      display: block;
-      color: var(--teal);
-      font-style: normal;
-      font-size: 13px;
-      font-weight: 900;
-    }
-
-    .step strong {
-      display: block;
-      margin-top: 6px;
-      font-size: 19px;
-    }
-
-    .step span {
-      display: block;
-      margin-top: 7px;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .cta {
-      margin-top: 28px;
-      padding: 28px;
-      display: grid;
-      grid-template-columns: 1fr auto;
-      align-items: center;
-      gap: 20px;
-      background: #fbf4e8;
-      border-color: #ead8b9;
-    }
-
-    .cta h2 {
-      margin: 0;
-      font-size: 25px;
-      letter-spacing: 0;
-    }
-
-    .cta p {
-      margin: 6px 0 0;
-      color: #765018;
-    }
-
-    .cta .btn {
-      border-color: var(--gold);
-      background: var(--gold);
-      color: #fff;
-      white-space: nowrap;
-    }
-
     .note {
       margin-top: 18px;
       color: var(--muted);
       font-size: 14px;
+    }
+
+    .req-list {
+      margin: 0;
+      padding-left: 22px;
+      font-size: 15px;
+      color: #344054;
+    }
+
+    .req-list li + li {
+      margin-top: 8px;
+    }
+
+    .compact-links {
+      display: grid;
+      gap: 8px;
+    }
+
+    .compact-links a {
+      min-height: 44px;
+      padding: 10px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      border: 1px solid #e6ebf3;
+      background: #fbfcfe;
+      color: var(--brand-dark);
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 900;
+    }
+
+    .compact-links a::after {
+      content: ">";
+      color: var(--gold);
+      font-weight: 900;
     }
 
     @media (max-width: 920px) {
@@ -451,15 +351,8 @@
         display: none;
       }
 
-      .why-grid,
-      .learning {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .audience-grid,
-      .quota-grid,
       .notice,
-      .cta {
+      .quota-grid {
         grid-template-columns: 1fr;
       }
     }
@@ -472,21 +365,15 @@
       }
 
       .hero-inner {
-        min-height: 360px;
-        padding: 42px 0 76px;
+        min-height: 320px;
+        padding: 42px 0 64px;
       }
 
       .hero p {
         font-size: 16px;
       }
 
-      .why-grid,
-      .learning {
-        grid-template-columns: 1fr;
-      }
-
-      .section,
-      .cta {
+      .section {
         padding: 18px;
       }
 
@@ -518,9 +405,9 @@
 
   <section class="hero">
     <div class="hero-inner">
-      <div class="crumb">首頁 / 招生資訊 / 學士班</div>
-      <h1>學士班招生資訊</h1>
-      <p>用經濟學理解世界，用資料與理論做出更好的決策。東吳經濟陪你從基礎能力走向財務金融、資料分析、公共政策與產業應用。</p>
+      <div class="crumb">首頁 / 招生資訊 / 碩士班</div>
+      <h1>碩士班招生資訊</h1>
+      <p>分為甄試入學與考試入學兩種管道，重視學業表現與研究潛力，培養經濟分析、政策研究與資料應用人才。</p>
       <div class="hero-actions">
         <a class="btn" href="course-info-demo.html" target="_blank" rel="noopener noreferrer">查詢課程資訊</a>
       </div>
@@ -530,9 +417,9 @@
   <main>
     <nav class="subnav" aria-label="招生資訊分頁">
       <a href="admission-info-demo.html">招生資訊總覽</a>
-      <a href="admission-undergrad-demo.html" aria-current="page">學士班</a>
+      <a href="admission-undergrad-demo.html">學士班</a>
       <a href="admission-transfer-demo.html">轉學/轉系/雙主修/輔系</a>
-      <a href="admission-master-demo.html">碩士班</a>
+      <a href="admission-master-demo.html" aria-current="page">碩士班</a>
       <a href="admission-doctoral-demo.html">博士班</a>
     </nav>
 
@@ -544,125 +431,47 @@
       <a class="btn" href="https://entrance.exam.scu.edu.tw/" target="_blank" rel="noopener noreferrer">前往東吳大學招生資訊網</a>
     </section>
 
-    <section class="section" id="high-school">
+    <section class="section">
       <div class="section-head">
-        <h2>學士班入學管道與名額</h2>
-        <p>115 學年度一般生名額示意，正式數字仍以招生簡章公告為準。</p>
+        <h2>碩士班招生管道</h2>
+        <p>分為甄試入學與考試入學兩種管道，名額與時程依東吳大學教務處招生組公告。</p>
       </div>
-      <div class="quota-grid">
+      <div class="quota-grid two-col">
         <article class="quota">
-          <strong>27</strong>
-          <h3>繁星推薦</h3>
-          <p>適合高中在校成績穩定、符合推薦條件的學生。</p>
-          <div class="link-row">
-            <span class="pill">高中生入學</span>
-            <span class="pill">校內推薦</span>
-            <span class="pill">學科能力測驗</span>
-          </div>
-        </article>
-        <article class="quota">
-          <strong>91</strong>
-          <h3>申請入學</h3>
-          <p>採計與檢定科目、篩選倍率依簡章公告為準。</p>
+          <strong>9</strong>
+          <h3>甄試入學</h3>
+          <p>以書面審查為主，著重學業表現與研究潛力。</p>
           <div class="subjects">
-            <b>第一階段</b><br>
-            檢定科目：數學B<br>
-            採計科目：英文、數學B<br>
-            <b>第二階段</b><br>
-            資料審查、面試。
-          </div>
-          <div class="link-row">
-            <span class="pill">高中生入學</span>
-            <span class="pill">學習歷程</span>
-            <span class="pill">學科能力測驗</span>
+            <b>審查項目</b><br>
+            歷年成績單、讀書計畫、自傳、其他有利資料。
           </div>
         </article>
         <article class="quota">
-          <strong>60</strong>
-          <h3>分發入學</h3>
-          <p>採計科目與權重依簡章公告為準。</p>
+          <strong>7</strong>
+          <h3>考試入學</h3>
+          <p>A、B 組合計 7 名（不含甄試生）。</p>
           <div class="subjects">
-            <b>採計科目</b><br>
-            國文、英文、數學乙。
-          </div>
-          <div class="link-row">
-            <span class="pill">高中生入學</span>
-            <span class="pill">分科測驗</span>
+            <b>考試科目</b><br>
+            A 組：經濟學<br>
+            B 組：統計學
           </div>
         </article>
       </div>
-    </section>
-
-    <section class="section" id="special">
-      <div class="section-head">
-        <h2>特殊身分與境外招生</h2>
-      </div>
-      <article class="card other">
-        <h3>特殊身分與境外招生</h3>
-        <p>境外生、僑生、港澳生與其他特殊身分招生管道，建議直接查詢東吳大學招生資訊網與國際事務單位公告。</p>
-        <div class="link-row">
-          <span class="pill">境外生</span>
-          <span class="pill">僑生</span>
-          <span class="pill">校方公告</span>
-        </div>
-      </article>
+      <p class="note">甄試與考試報名時程依招生組公告，建議定期關注東吳大學招生資訊網。</p>
     </section>
 
     <section class="section">
       <div class="section-head">
-        <h2>為什麼選東吳經濟</h2>
+        <h2>報考資格</h2>
+        <p>符合以下條件之一者皆可報考，詳細規定以招生簡章為準。</p>
       </div>
-      <div class="why-grid">
-        <div class="why">
-          <div class="number">01</div>
-          <strong>理論與應用並重</strong>
-          <p>從個體經濟學、總體經濟學到產業與政策議題，訓練完整的分析框架。</p>
-        </div>
-        <div class="why">
-          <div class="number">02</div>
-          <strong>資料分析能力</strong>
-          <p>結合 Python、R、計量經濟學與資料分析方法，培養能處理真實資料的能力。</p>
-        </div>
-        <div class="why">
-          <div class="number">03</div>
-          <strong>財務金融銜接</strong>
-          <p>投資學、財務管理、金融市場等課程，協助學生連結金融產業與商業決策。</p>
-        </div>
-        <div class="why">
-          <div class="number">04</div>
-          <strong>職涯與升學彈性</strong>
-          <p>可銜接研究所、金融業、公部門、一般企業、研究單位與資料分析職務。</p>
-        </div>
-      </div>
+      <ol class="req-list">
+        <li>國內公立或已立案私立大學校院畢業，取得學士以上學位者。</li>
+        <li>符合教育部採認規定之境外大學校院畢業者（考試入學適用）。</li>
+        <li>具教育部「入學大學同等學力認定標準」相關資格者。</li>
+      </ol>
     </section>
 
-    <section class="section">
-      <div class="section-head">
-        <h2>入學後你會怎麼學</h2>
-      </div>
-      <div class="learning">
-        <div class="step">
-          <em>一年級</em>
-          <strong>分析基礎</strong>
-          <span>經濟學原理、微積分、會計學，建立經濟與商業分析基礎。</span>
-        </div>
-        <div class="step">
-          <em>二年級</em>
-          <strong>核心訓練</strong>
-          <span>個體經濟學、總體經濟學、統計學、經濟數學，強化理論與量化分析能力。</span>
-        </div>
-        <div class="step">
-          <em>三至四年級</em>
-          <strong>專業分流</strong>
-          <span>修讀貨幣銀行學、國際貿易、國際金融、財政學，並依興趣選擇專業方向。</span>
-        </div>
-        <div class="step">
-          <em>畢業後</em>
-          <strong>升學就業</strong>
-          <span>銜接研究所、金融業、公部門、一般企業與資料分析相關職務。</span>
-        </div>
-      </div>
-    </section>
   </main>
 </body>
 </html>

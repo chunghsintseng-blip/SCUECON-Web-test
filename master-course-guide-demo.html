@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>東吳經濟學系｜碩士班修課須知範例</title>
+  <title>東吳經濟學系｜碩士班課程資訊範例</title>
   <style>
     :root {
       --ink: #18202f;
@@ -256,6 +256,134 @@
       font-size: 14px;
     }
 
+    .required-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .required-item {
+      border: 1px solid var(--line);
+      background: #fbfcfe;
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      min-height: 60px;
+    }
+
+    .required-item strong {
+      color: var(--brand-dark);
+      font-size: 15px;
+      letter-spacing: 0;
+    }
+
+    .required-item span {
+      color: var(--brand);
+      font-size: 13px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .group-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      align-items: start;
+    }
+
+    .group-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      overflow: hidden;
+      box-shadow: 0 10px 24px rgba(24, 32, 47, .05);
+    }
+
+    .group-card .group-head {
+      padding: 18px;
+      color: #fff;
+    }
+
+    .group-card.theory .group-head { background: var(--green); }
+    .group-card.method .group-head { background: var(--teal); }
+    .group-card.finance .group-head { background: var(--gold); }
+
+    .group-card .group-head h3 {
+      margin: 0;
+      font-size: 21px;
+      letter-spacing: 0;
+      color: #fff;
+    }
+
+    .group-card .group-head p {
+      margin: 6px 0 0;
+      color: rgba(255, 255, 255, .86);
+      font-size: 13px;
+    }
+
+    .group-card .group-body {
+      padding: 18px;
+    }
+
+    .course-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 8px;
+    }
+
+    .course-list li {
+      padding: 0 0 8px;
+      border-bottom: 1px solid #edf0f5;
+      font-size: 14px;
+      color: var(--ink);
+    }
+
+    .course-list li:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .summary-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      padding: 20px;
+      min-height: 130px;
+    }
+
+    .summary-card strong {
+      display: block;
+      color: var(--brand);
+      font-size: 36px;
+      line-height: 1;
+    }
+
+    .summary-card h4 {
+      margin: 10px 0 4px;
+      font-size: 17px;
+      letter-spacing: 0;
+    }
+
+    .summary-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .note {
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
     .link-list {
       margin-top: 16px;
       display: grid;
@@ -286,8 +414,14 @@
 
     @media (max-width: 960px) {
       .notice,
-      .guide-grid {
+      .guide-grid,
+      .group-grid,
+      .summary-grid {
         grid-template-columns: 1fr;
+      }
+
+      .required-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
       .quick-links {
@@ -317,8 +451,13 @@
 
       .notice,
       .section,
-      .guide-card {
+      .guide-card,
+      .summary-card {
         padding: 18px;
+      }
+
+      .required-grid {
+        grid-template-columns: 1fr;
       }
 
       .section-title {
@@ -338,15 +477,15 @@
         <a href="#" target="_blank" rel="noopener noreferrer">最新消息</a>
         <a href="#" target="_blank" rel="noopener noreferrer">學系介紹</a>
         <a href="course-info-demo.html" target="_blank" rel="noopener noreferrer" aria-current="page">課程資訊</a>
-        <a href="admission-undergrad-demo.html" target="_blank" rel="noopener noreferrer">招生資訊</a>
+        <a href="admission-info-demo.html" target="_blank" rel="noopener noreferrer">招生資訊</a>
       </nav>
     </div>
   </header>
 
   <section class="hero">
     <div class="hero-inner">
-      <div class="crumb">首頁 / 課程資訊 / 碩士班 / 碩士班修課須知</div>
-      <h1>碩士班修課須知</h1>
+      <div class="crumb">首頁 / 課程資訊 / 碩士班 / 碩士班課程資訊</div>
+      <h1>碩士班課程資訊</h1>
       <p>整理碩士班必選修科目表、課群規劃、修課說明、論文口試、資格考核與學位考試相關入口。</p>
     </div>
   </section>
@@ -354,7 +493,7 @@
   <main>
     <nav class="subnav" aria-label="碩博士班課程分頁">
       <a href="course-info-demo.html">課程資訊總覽</a>
-      <a href="master-course-guide-demo.html" aria-current="page">碩士班修課須知</a>
+      <a href="master-course-guide-demo.html" aria-current="page">碩士班課程資訊</a>
       <a href="doctoral-course-guide-demo.html">博士班修課須知</a>
     </nav>
 
@@ -363,12 +502,161 @@
         <h2>碩士班修課資料總覽</h2>
         <p>依修課、學習手冊、論文與資格考核等使用情境分類。</p>
       </div>
-      <div class="quick-links" aria-label="碩士班修課須知快速入口">
+      <div class="quick-links" aria-label="碩士班課程資訊快速入口">
+        <a href="#required-courses">必修課程</a>
+        <a href="#groups">選修課群</a>
+        <a href="#graduation">畢業要求</a>
         <a href="#curriculum">必選修科目表</a>
         <a href="#planning">修課資料</a>
         <a href="#thesis">論文專區</a>
         <a href="#exam">資格考核</a>
       </div>
+    </section>
+
+    <section class="section" id="required-courses">
+      <div class="section-title">
+        <div>
+          <h2>必修課程（12 學分）</h2>
+          <p>系訂必修，含論文寫作、專題討論與論文。</p>
+        </div>
+      </div>
+      <div class="required-grid">
+        <article class="required-item">
+          <strong>個體經濟學</strong>
+          <span>3 學分</span>
+        </article>
+        <article class="required-item">
+          <strong>總體經濟學</strong>
+          <span>3 學分</span>
+        </article>
+        <article class="required-item">
+          <strong>應用計量經濟學</strong>
+          <span>3 學分</span>
+        </article>
+        <article class="required-item">
+          <strong>論文寫作方法與技巧</strong>
+          <span>1 學分</span>
+        </article>
+        <article class="required-item">
+          <strong>專題討論（一）、（二）</strong>
+          <span>2 學分</span>
+        </article>
+        <article class="required-item">
+          <strong>論文</strong>
+          <span>—</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="groups">
+      <div class="section-title">
+        <div>
+          <h2>選修三大課群（20 學分）</h2>
+          <p>須至少修讀兩課群，每課群至少 4 學分；同一科目不得重複計入不同課群。</p>
+        </div>
+      </div>
+      <div class="group-grid">
+        <article class="group-card theory">
+          <div class="group-head">
+            <h3>經濟理論與應用</h3>
+            <p>至少修讀 4 學分</p>
+          </div>
+          <div class="group-body">
+            <ul class="course-list">
+              <li>經濟成長</li>
+              <li>貨幣經濟學</li>
+              <li>貨幣金融專題討論（A）／（B）</li>
+              <li>臺灣經濟發展與成長</li>
+              <li>總體勞動經濟學</li>
+              <li>經濟發展</li>
+              <li>全球化、經濟整合與國際貿易</li>
+              <li>反托拉斯經濟學及案例分析</li>
+              <li>公共政策與財經專題（一）／（二）</li>
+              <li>區域經濟學</li>
+              <li>產業經濟學</li>
+              <li>管理經濟專題</li>
+              <li>公共經濟學專題</li>
+              <li>網路理論專題</li>
+              <li>競賽理論</li>
+              <li>租稅理論與實務</li>
+              <li>健康經濟學</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="group-card method">
+          <div class="group-head">
+            <h3>計量與數量方法</h3>
+            <p>至少修讀 4 學分</p>
+          </div>
+          <div class="group-body">
+            <ul class="course-list">
+              <li>統計分析</li>
+              <li>績效評估：生產力與效率分析</li>
+              <li>產業經濟學專題研究</li>
+              <li>資料分析與應用</li>
+              <li>計量經濟學專題</li>
+              <li>投資策略程式設計</li>
+              <li>經濟學方法論</li>
+              <li>財務數量研究</li>
+              <li>產業分析</li>
+              <li>數理經濟學</li>
+              <li>Excel VBA 精通程式開發能力</li>
+              <li>財務軟體應用</li>
+              <li>大數據計量經濟學</li>
+              <li>應用時間數列</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="group-card finance">
+          <div class="group-head">
+            <h3>金融與財務</h3>
+            <p>至少修讀 4 學分</p>
+          </div>
+          <div class="group-body">
+            <ul class="course-list">
+              <li>經濟與投資分析</li>
+              <li>期貨與選擇權</li>
+              <li>計算智慧與網路金融科技</li>
+              <li>財務經濟學</li>
+              <li>財務經濟學專題研究</li>
+              <li>保險專題研究</li>
+              <li>財務風險管理</li>
+              <li>機器學習於經濟與金融之應用</li>
+              <li>文字探勘於經濟與金融之應用</li>
+              <li>投資學</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="graduation">
+      <div class="section-title">
+        <div>
+          <h2>畢業學分要求</h2>
+          <p>本系碩士班應修最低畢業學分為 32 學分。</p>
+        </div>
+      </div>
+      <div class="summary-grid">
+        <article class="summary-card">
+          <strong>32</strong>
+          <h4>畢業總學分</h4>
+          <p>系訂必修 12 + 選修 20。</p>
+        </article>
+        <article class="summary-card">
+          <strong>12</strong>
+          <h4>系訂必修</h4>
+          <p>含個體、總體、應用計量、論文寫作與論文。</p>
+        </article>
+        <article class="summary-card">
+          <strong>20</strong>
+          <h4>選修學分</h4>
+          <p>三大課群任選，至少修讀兩課群、每課群至少 4 學分。</p>
+        </article>
+      </div>
+      <p class="note">資料來源：東吳經濟學系 113 學年度碩士班課群規劃與畢業規定。</p>
     </section>
 
     <section class="section">

@@ -112,7 +112,7 @@
     <rect width="330" height="480" rx="14" class="paper" stroke="#d8deea" stroke-width="2"/>
     <rect width="330" height="74" rx="14" class="blue"/>
     <rect y="58" width="330" height="16" class="blue"/>
-    <text x="24" y="45" class="h3 white">金融與財務</text>
+    <text x="24" y="45" class="h3 white">財務與金融</text>
     <text x="24" y="106" class="small blue">金融市場｜投資｜財務管理</text>
     <line x1="24" y1="126" x2="306" y2="126" class="thin"/>
     <text x="24" y="148" class="tiny ink">投資學</text>

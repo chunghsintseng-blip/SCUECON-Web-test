@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>東吳經濟學系｜招生資訊範例</title>
+  <style>
+    :root {
+      --ink: #18202f;
+      --muted: #667085;
+      --line: #d9dee8;
+      --paper: #ffffff;
+      --soft: #f6f8fb;
+      --brand: #1c3b7f;
+      --brand-dark: #142c61;
+      --brand-deep: #0b1835;
+      --link: #105389;
+      --gold: #b88a3d;
+      --teal: #2f758a;
+      --shadow: 0 16px 38px rgba(24, 32, 47, .1);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--soft);
+      font-family: "Noto Sans TC", "Microsoft JhengHei", system-ui, sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .topbar {
+      background: var(--brand);
+      color: #fff;
+    }
+
+    .topbar-inner {
+      width: min(1160px, calc(100% - 40px));
+      min-height: 64px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      border: 2px solid rgba(255, 255, 255, .84);
+      display: grid;
+      place-items: center;
+      font-size: 14px;
+    }
+
+    .nav {
+      display: flex;
+      gap: 18px;
+      color: rgba(255, 255, 255, .82);
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    .hero {
+      color: #fff;
+      background:
+        linear-gradient(90deg, rgba(11, 24, 53, .94), rgba(28, 59, 127, .82)),
+        url("https://www.scu.edu.tw/econ/images/top/main-img02.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero-inner {
+      width: min(1160px, calc(100% - 40px));
+      min-height: 360px;
+      margin: 0 auto;
+      padding: 58px 0 76px;
+      display: grid;
+      align-content: center;
+    }
+
+    .crumb {
+      color: rgba(255, 255, 255, .76);
+      font-size: 14px;
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(36px, 5vw, 64px);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    .hero p {
+      max-width: 720px;
+      margin: 18px 0 0;
+      color: rgba(255, 255, 255, .9);
+      font-size: 19px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .btn {
+      min-height: 44px;
+      padding: 0 18px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(255, 255, 255, .48);
+      text-decoration: none;
+      font-weight: 900;
+      background: #fff;
+      color: var(--brand);
+    }
+
+    .btn.secondary {
+      background: transparent;
+      color: #fff;
+    }
+
+    main {
+      width: min(1160px, calc(100% - 40px));
+      margin: -38px auto 76px;
+    }
+
+    .section,
+    .level-card,
+    .subnav {
+      background: var(--paper);
+      border: 1px solid var(--line);
+    }
+
+    .subnav {
+      padding: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      box-shadow: var(--shadow);
+    }
+
+    .subnav a {
+      min-height: 38px;
+      padding: 0 13px;
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid #dfe6ef;
+      color: var(--brand-dark);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .subnav a[aria-current="page"] {
+      border-color: var(--brand);
+      background: var(--brand);
+      color: #fff;
+    }
+
+    .notice {
+      margin-top: 16px;
+      box-shadow: var(--shadow);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 20px;
+      padding: 24px;
+      background: #fbf4e8;
+      border: 1px solid #ead8b9;
+    }
+
+    .notice h2 {
+      margin: 0;
+      font-size: 25px;
+      letter-spacing: 0;
+    }
+
+    .notice p {
+      margin: 6px 0 0;
+      color: #765018;
+    }
+
+    .notice .btn {
+      border-color: var(--brand);
+      background: var(--brand);
+      color: #fff;
+      white-space: nowrap;
+    }
+
+    .section {
+      margin-top: 28px;
+      padding: 26px;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 18px;
+    }
+
+    .section-head h2 {
+      margin: 0;
+      font-size: 26px;
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .level-layout {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .level-card {
+      padding: 22px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .level-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto;
+      height: 5px;
+      background: var(--brand);
+    }
+
+    .level-card.graduate::before { background: var(--teal); }
+    .level-card.doctoral::before { background: #7a4f9a; }
+    .level-card.transfer::before { background: var(--gold); }
+
+    .level-card .label {
+      margin: 0 0 8px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .level-card h3 {
+      margin: 0;
+      font-size: 22px;
+      line-height: 1.3;
+      letter-spacing: 0;
+    }
+
+    .level-card p {
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .compact-links {
+      margin-top: auto;
+      padding-top: 16px;
+      display: grid;
+      gap: 8px;
+    }
+
+    .compact-links a {
+      min-height: 42px;
+      padding: 9px 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      border: 1px solid #e6ebf3;
+      background: #fbfcfe;
+      color: var(--brand-dark);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 900;
+    }
+
+    .compact-links a::after {
+      content: ">";
+      color: var(--gold);
+      font-weight: 900;
+    }
+
+    @media (max-width: 1040px) {
+      .level-layout {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 920px) {
+      .nav {
+        display: none;
+      }
+
+      .notice {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .topbar-inner,
+      .hero-inner,
+      main {
+        width: min(100% - 28px, 1160px);
+      }
+
+      .hero-inner {
+        min-height: 320px;
+        padding: 42px 0 64px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .level-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .section {
+        padding: 18px;
+      }
+
+      .section-head {
+        display: block;
+      }
+
+      .section-head p {
+        margin-top: 6px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <div class="brand-mark">EC</div>
+        <div>東吳大學經濟學系</div>
+      </div>
+      <nav class="nav" aria-label="主要選單">
+        <a href="#" target="_blank" rel="noopener noreferrer">最新消息</a>
+        <a href="#" target="_blank" rel="noopener noreferrer">學系介紹</a>
+        <a href="course-info-demo.html" target="_blank" rel="noopener noreferrer">課程資訊</a>
+        <a href="admission-info-demo.html" aria-current="page">招生資訊</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="crumb">首頁 / 招生資訊</div>
+      <h1>招生資訊總覽</h1>
+      <p>學士班、碩士班、博士班的招生管道與要點一覽。</p>
+      <div class="hero-actions">
+        <a class="btn" href="course-info-demo.html" target="_blank" rel="noopener noreferrer">查詢課程資訊</a>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <nav class="subnav" aria-label="招生資訊分頁">
+      <a href="admission-info-demo.html" aria-current="page">招生資訊總覽</a>
+      <a href="admission-undergrad-demo.html">學士班</a>
+      <a href="admission-transfer-demo.html">轉學/轉系/雙主修/輔系</a>
+      <a href="admission-master-demo.html">碩士班</a>
+      <a href="admission-doctoral-demo.html">博士班</a>
+    </nav>
+
+    <section class="notice">
+      <div>
+        <h2>最新招生簡章與報名時程</h2>
+        <p>招生名額、報名日期、考試日期與採計方式，請以東吳大學教務處招生組公告為準。</p>
+      </div>
+      <a class="btn" href="https://entrance.exam.scu.edu.tw/" target="_blank" rel="noopener noreferrer">前往東吳大學招生資訊網</a>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>各學制招生資訊</h2>
+        <p>學士班、碩士班與博士班的主要招生管道與名額一覽。</p>
+      </div>
+      <div class="level-layout">
+        <article class="level-card undergrad">
+          <p class="label">Undergraduate</p>
+          <h3>學士班</h3>
+          <p>高中生入學管道（繁星/申請/分發）與特殊身分招生。</p>
+          <div class="compact-links">
+            <a href="admission-undergrad-demo.html">查看學士班招生</a>
+          </div>
+        </article>
+
+        <article class="level-card transfer">
+          <p class="label">Transfer</p>
+          <h3>轉學/轉系/雙主修/輔系</h3>
+          <p>大專校院在學生轉入或同步修讀本系的入學管道。</p>
+          <div class="compact-links">
+            <a href="admission-transfer-demo.html">查看轉學等管道</a>
+          </div>
+        </article>
+
+        <article class="level-card graduate">
+          <p class="label">Graduate</p>
+          <h3>碩士班</h3>
+          <p>甄試 9 名與考試 7 名。</p>
+          <div class="compact-links">
+            <a href="admission-master-demo.html">查看碩士班招生</a>
+          </div>
+        </article>
+
+        <article class="level-card doctoral">
+          <p class="label">Doctoral</p>
+          <h3>博士班</h3>
+          <p>招生名額 3 名。</p>
+          <div class="compact-links">
+            <a href="admission-doctoral-demo.html">查看博士班招生</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
