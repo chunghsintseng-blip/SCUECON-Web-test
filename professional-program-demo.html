@@ -132,18 +132,46 @@
     .notice,
     .program,
     .process,
-    .resources {
+    .resources,
+    .subnav {
       background: var(--paper);
       border: 1px solid var(--line);
     }
 
     .notice {
+      margin-top: 16px;
       padding: 24px;
       box-shadow: var(--shadow);
       display: grid;
       grid-template-columns: 1fr auto;
       align-items: center;
       gap: 20px;
+    }
+
+    .subnav {
+      padding: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      box-shadow: var(--shadow);
+    }
+
+    .subnav a {
+      min-height: 38px;
+      padding: 0 13px;
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid #dfe6ef;
+      color: var(--brand-dark);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .subnav a[aria-current="page"] {
+      border-color: var(--brand);
+      background: var(--brand);
+      color: #fff;
     }
 
     .notice h2,
@@ -553,6 +581,13 @@
   </section>
 
   <main>
+    <nav class="subnav" aria-label="學士班課程分頁">
+      <a href="course-feature-demo.html">課程特色</a>
+      <a href="course-map-demo.html">課程地圖</a>
+      <a href="professional-program-demo.html" aria-current="page">專業學程</a>
+      <a href="undergrad-course-guide-demo.html">大學部修課須知</a>
+    </nav>
+
     <section class="notice">
       <div>
         <h2>專業學程證明</h2>

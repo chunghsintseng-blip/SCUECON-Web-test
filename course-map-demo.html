@@ -125,6 +125,34 @@
       margin: -38px auto 72px;
     }
 
+    .subnav {
+      padding: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .subnav a {
+      min-height: 38px;
+      padding: 0 13px;
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid #dfe6ef;
+      color: var(--brand-dark);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .subnav a[aria-current="page"] {
+      border-color: var(--brand);
+      background: var(--brand);
+      color: #fff;
+    }
+
     .download {
       background: #f9f2e7;
       border: 1px solid #ead5b3;
@@ -458,6 +486,13 @@
   </section>
 
   <main>
+    <nav class="subnav" aria-label="學士班課程分頁">
+      <a href="course-feature-demo.html">課程特色</a>
+      <a href="course-map-demo.html" aria-current="page">課程地圖</a>
+      <a href="professional-program-demo.html">專業學程</a>
+      <a href="undergrad-course-guide-demo.html">大學部修課須知</a>
+    </nav>
+
     <section class="overview">
       <div class="section-title">
         <h2>四年學習路徑</h2>
