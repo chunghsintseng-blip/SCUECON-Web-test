@@ -185,6 +185,17 @@
       text-decoration: none;
       font-size: 13px;
       font-weight: 900;
+      transition: border-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+    }
+
+    .quick-links a:hover,
+    .quick-links a:focus-visible,
+    .subnav a:not([aria-current="page"]):hover,
+    .subnav a:not([aria-current="page"]):focus-visible {
+      transform: translateY(-2px);
+      border-color: rgba(28, 59, 127, .45);
+      box-shadow: 0 14px 30px rgba(24, 32, 47, .08);
+      outline: none;
     }
 
     .subnav {
@@ -349,6 +360,60 @@
       padding-bottom: 0;
     }
 
+    .subhead {
+      margin: 22px 0 12px;
+      color: var(--brand-dark);
+      font-size: 18px;
+      letter-spacing: 0;
+    }
+
+    .subhead:first-child {
+      margin-top: 0;
+    }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .summary-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      padding: 20px;
+      min-height: 130px;
+    }
+
+    .summary-card strong {
+      display: block;
+      color: var(--brand);
+      font-size: 36px;
+      line-height: 1;
+    }
+
+    .summary-card h4 {
+      margin: 10px 0 4px;
+      font-size: 17px;
+      letter-spacing: 0;
+    }
+
+    .summary-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .rule-list {
+      margin: 0;
+      padding-left: 22px;
+      font-size: 15px;
+      color: var(--ink);
+    }
+
+    .rule-list li + li {
+      margin-top: 10px;
+    }
+
     .note {
       margin-top: 14px;
       color: var(--muted);
@@ -374,6 +439,7 @@
       text-decoration: none;
       font-size: 15px;
       font-weight: 900;
+      transition: border-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
     }
 
     .link-list a::after {
@@ -383,10 +449,19 @@
       font-weight: 900;
     }
 
+    .link-list a:hover,
+    .link-list a:focus-visible {
+      transform: translateY(-2px);
+      border-color: rgba(28, 59, 127, .45);
+      box-shadow: 0 14px 30px rgba(24, 32, 47, .08);
+      outline: none;
+    }
+
     @media (max-width: 960px) {
       .notice,
       .guide-grid,
-      .group-grid {
+      .group-grid,
+      .summary-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
@@ -425,12 +500,14 @@
 
       .notice,
       .section,
-      .guide-card {
+      .guide-card,
+      .summary-card {
         padding: 18px;
       }
 
       .required-grid,
-      .group-grid {
+      .group-grid,
+      .summary-grid {
         grid-template-columns: 1fr;
       }
 
@@ -478,6 +555,9 @@
         <p>依使用情境分類，快速找到學士班修課、選課與畢業相關文件。</p>
       </div>
       <div class="quick-links" aria-label="修課須知快速入口">
+        <a href="#required-courses">必修課程</a>
+        <a href="#graduation">畢業學分</a>
+        <a href="#notes">附註與規定</a>
         <a href="#rules">課程辦法</a>
         <a href="#selection">選課須知</a>
         <a href="#lookup">課程查詢</a>
@@ -485,10 +565,166 @@
       </div>
     </section>
 
+    <section class="section" id="required-courses">
+      <div class="section-title">
+        <div>
+          <h2>必修課程</h2>
+          <p>包含校訂共同必修與系必修，正式必選修以入學年度科目表為準（以下為 114 學年度新生適用版）。</p>
+        </div>
+      </div>
+
+      <h3 class="subhead">校訂共同必修</h3>
+      <div class="required-grid">
+        <article class="required-item">
+          <strong>國文</strong>
+          <span>4 學分</span>
+        </article>
+        <article class="required-item">
+          <strong>外文 (一)、(二)</strong>
+          <span>8 學分</span>
+        </article>
+        <article class="required-item">
+          <strong>通識課程</strong>
+          <span>10 學分</span>
+        </article>
+        <article class="required-item">
+          <strong>數位自主學習</strong>
+          <span>2 學分</span>
+        </article>
+        <article class="required-item">
+          <strong>生命關懷</strong>
+          <span>1 學分</span>
+        </article>
+        <article class="required-item">
+          <strong>思維方法</strong>
+          <span>1 學分</span>
+        </article>
+        <article class="required-item">
+          <strong>職涯錨定</strong>
+          <span>1 學分</span>
+        </article>
+        <article class="required-item">
+          <strong>人工智慧跨域應用</strong>
+          <span>1 學分</span>
+        </article>
+        <article class="required-item">
+          <strong>體育</strong>
+          <span>4 學期・0 學分</span>
+        </article>
+      </div>
+
+      <h3 class="subhead">系必修</h3>
+      <div class="required-grid">
+        <article class="required-item">
+          <strong>經濟學原理</strong>
+          <span>6 學分</span>
+        </article>
+        <article class="required-item">
+          <strong>微積分</strong>
+          <span>6 學分</span>
+        </article>
+        <article class="required-item">
+          <strong>會計學</strong>
+          <span>6 學分</span>
+        </article>
+        <article class="required-item">
+          <strong>個體經濟學</strong>
+          <span>6 學分</span>
+        </article>
+        <article class="required-item">
+          <strong>總體經濟學</strong>
+          <span>6 學分</span>
+        </article>
+        <article class="required-item">
+          <strong>統計學</strong>
+          <span>6 學分</span>
+        </article>
+        <article class="required-item">
+          <strong>經濟數學</strong>
+          <span>4 學分</span>
+        </article>
+        <article class="required-item">
+          <strong>貨幣銀行學</strong>
+          <span>6 學分</span>
+        </article>
+        <article class="required-item">
+          <strong>財政學</strong>
+          <span>6 學分</span>
+        </article>
+        <article class="required-item">
+          <strong>國際金融</strong>
+          <span>3 學分</span>
+        </article>
+        <article class="required-item">
+          <strong>國際貿易</strong>
+          <span>3 學分</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="graduation">
+      <div class="section-title">
+        <div>
+          <h2>畢業學分與標準</h2>
+          <p>學士班畢業須修滿 128 學分，並通過三項畢業標準。</p>
+        </div>
+      </div>
+      <div class="summary-grid">
+        <article class="summary-card">
+          <strong>128</strong>
+          <h4>畢業總學分</h4>
+          <p>含必修 86 + 選修 42。</p>
+        </article>
+        <article class="summary-card">
+          <strong>86</strong>
+          <h4>必修學分</h4>
+          <p>校訂共同必修 28 + 系必修 58。</p>
+        </article>
+        <article class="summary-card">
+          <strong>42</strong>
+          <h4>選修學分</h4>
+          <p>至多承認外系 16 學分。</p>
+        </article>
+      </div>
+
+      <h3 class="subhead">三項畢業標準</h3>
+      <div class="required-grid">
+        <article class="required-item">
+          <strong>外文能力</strong>
+          <span>檢核通過</span>
+        </article>
+        <article class="required-item">
+          <strong>資訊能力</strong>
+          <span>檢核通過</span>
+        </article>
+        <article class="required-item">
+          <strong>美育活動</strong>
+          <span>校內藝文活動 4 場次</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="notes">
+      <div class="section-title">
+        <div>
+          <h2>附註與規定</h2>
+        </div>
+      </div>
+      <ol class="rule-list">
+        <li>本系畢業須修滿 128 學分，必修課以修讀本系開設之課程為原則，至多承認修讀外系科目 16 學分；商學院 EMI 課程不受此限。</li>
+        <li>全學年之科目其上學期未達 50 分者，不得續修下學期科目。</li>
+        <li>商學院第二專長課程「消費者行為研究與應用 (A)」、「消費者行為研究與應用 (B)」、「行銷個案分析與應用」、「加密貨幣金融」及商學院課程「富蘭克林講座-金融投資與資產管理」視為本系選修。</li>
+        <li>選修科目及開設年級，視實際需要，得彈性調整。</li>
+        <li>外文共開設英、日、德、韓四種語文，可任選一科修習；外文 (一) 與 (二) 可選擇同一語文或不同語文，原則上不重複。外語學院學生不得修習主修語文課程；外籍生、僑生原則上不得修習母語或僑居地語文。</li>
+        <li>個體經濟學、總體經濟學、貨幣銀行學、財政學、國際金融、國際貿易等系必修須先修「經濟學原理」並全學年達 50 分；經濟數學、數理經濟學以「微積分」為先修；計量經濟學、數理統計學以「統計學」為先修。</li>
+      </ol>
+      <p class="note">資料來源：東吳大學經濟學系 114 學年度學士班必、選修科目表。</p>
+    </section>
+
     <section class="section">
       <div class="section-title">
         <div>
-          <h2>常用文件入口</h2>
+          <h2>常用文件連結</h2>
         </div>
       </div>
       <div class="guide-grid">

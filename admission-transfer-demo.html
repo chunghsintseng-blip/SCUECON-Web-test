@@ -162,6 +162,15 @@
       text-decoration: none;
       font-size: 13px;
       font-weight: 900;
+      transition: border-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+    }
+
+    .subnav a:not([aria-current="page"]):hover,
+    .subnav a:not([aria-current="page"]):focus-visible {
+      transform: translateY(-2px);
+      border-color: rgba(28, 59, 127, .45);
+      box-shadow: 0 14px 30px rgba(24, 32, 47, .08);
+      outline: none;
     }
 
     .subnav a[aria-current="page"] {
@@ -365,13 +374,13 @@
             <td>日間學制二年級</td>
             <td>2 名</td>
             <td>資料審查 × 1</td>
-            <td>歷年成績單及名次證明、自傳（1500 字以內，含讀書計畫）、其他有利審查資料。</td>
+            <td>歷年成績單及名次證明、自傳 (1500 字以內，含讀書計畫)、其他有利審查資料。</td>
           </tr>
           <tr>
             <td>日間學制三年級</td>
             <td>7 名</td>
             <td>資料審查 × 1</td>
-            <td>歷年成績單及名次證明、自傳（1500 字以內，含讀書計畫）、其他有利審查資料。</td>
+            <td>歷年成績單及名次證明、自傳 (1500 字以內，含讀書計畫)、其他有利審查資料。</td>
           </tr>
         </tbody>
       </table>

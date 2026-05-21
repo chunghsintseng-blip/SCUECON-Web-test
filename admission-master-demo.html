@@ -167,6 +167,15 @@
       text-decoration: none;
       font-size: 13px;
       font-weight: 900;
+      transition: border-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+    }
+
+    .subnav a:not([aria-current="page"]):hover,
+    .subnav a:not([aria-current="page"]):focus-visible {
+      transform: translateY(-2px);
+      border-color: rgba(28, 59, 127, .45);
+      box-shadow: 0 14px 30px rgba(24, 32, 47, .08);
+      outline: none;
     }
 
     .subnav a[aria-current="page"] {
@@ -338,12 +347,21 @@
       text-decoration: none;
       font-size: 15px;
       font-weight: 900;
+      transition: border-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
     }
 
     .compact-links a::after {
       content: ">";
       color: var(--gold);
       font-weight: 900;
+    }
+
+    .compact-links a:hover,
+    .compact-links a:focus-visible {
+      transform: translateY(-2px);
+      border-color: rgba(28, 59, 127, .45);
+      box-shadow: 0 14px 30px rgba(24, 32, 47, .08);
+      outline: none;
     }
 
     @media (max-width: 920px) {
@@ -449,7 +467,7 @@
         <article class="quota">
           <strong>7</strong>
           <h3>考試入學</h3>
-          <p>A、B 組合計 7 名（不含甄試生）。</p>
+          <p>A、B 組合計 7 名 (不含甄試生)。</p>
           <div class="subjects">
             <b>考試科目</b><br>
             A 組：經濟學<br>
@@ -467,7 +485,7 @@
       </div>
       <ol class="req-list">
         <li>國內公立或已立案私立大學校院畢業，取得學士以上學位者。</li>
-        <li>符合教育部採認規定之境外大學校院畢業者（考試入學適用）。</li>
+        <li>符合教育部採認規定之境外大學校院畢業者 (考試入學適用)。</li>
         <li>具教育部「入學大學同等學力認定標準」相關資格者。</li>
       </ol>
     </section>

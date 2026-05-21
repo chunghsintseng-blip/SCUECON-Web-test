@@ -168,6 +168,15 @@
       text-decoration: none;
       font-size: 13px;
       font-weight: 900;
+      transition: border-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+    }
+
+    .subnav a:not([aria-current="page"]):hover,
+    .subnav a:not([aria-current="page"]):focus-visible {
+      transform: translateY(-2px);
+      border-color: rgba(28, 59, 127, .45);
+      box-shadow: 0 14px 30px rgba(24, 32, 47, .08);
+      outline: none;
     }
 
     .subnav a[aria-current="page"] {
@@ -299,12 +308,21 @@
       text-decoration: none;
       font-size: 14px;
       font-weight: 900;
+      transition: border-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
     }
 
     .compact-links a::after {
       content: ">";
       color: var(--gold);
       font-weight: 900;
+    }
+
+    .compact-links a:hover,
+    .compact-links a:focus-visible {
+      transform: translateY(-2px);
+      border-color: rgba(28, 59, 127, .45);
+      box-shadow: 0 14px 30px rgba(24, 32, 47, .08);
+      outline: none;
     }
 
     @media (max-width: 1040px) {
@@ -410,7 +428,7 @@
         <article class="level-card undergrad">
           <p class="label">Undergraduate</p>
           <h3>學士班</h3>
-          <p>高中生入學管道（繁星/申請/分發）與特殊身分招生。</p>
+          <p>高中生入學管道 (繁星/申請/分發) 與特殊身分招生。</p>
           <div class="compact-links">
             <a href="admission-undergrad-demo.html">查看學士班招生</a>
           </div>

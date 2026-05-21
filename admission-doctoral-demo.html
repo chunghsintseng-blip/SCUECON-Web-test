@@ -167,6 +167,15 @@
       text-decoration: none;
       font-size: 13px;
       font-weight: 900;
+      transition: border-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+    }
+
+    .subnav a:not([aria-current="page"]):hover,
+    .subnav a:not([aria-current="page"]):focus-visible {
+      transform: translateY(-2px);
+      border-color: rgba(28, 59, 127, .45);
+      box-shadow: 0 14px 30px rgba(24, 32, 47, .08);
+      outline: none;
     }
 
     .subnav a[aria-current="page"] {
@@ -311,12 +320,21 @@
       text-decoration: none;
       font-size: 15px;
       font-weight: 900;
+      transition: border-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
     }
 
     .compact-links a::after {
       content: ">";
       color: var(--gold);
       font-weight: 900;
+    }
+
+    .compact-links a:hover,
+    .compact-links a:focus-visible {
+      transform: translateY(-2px);
+      border-color: rgba(28, 59, 127, .45);
+      box-shadow: 0 14px 30px rgba(24, 32, 47, .08);
+      outline: none;
     }
 
     @media (max-width: 920px) {
@@ -436,7 +454,7 @@
       </div>
       <ul class="req-list">
         <li>最高學歷歷年成績單。</li>
-        <li>碩士論文（國外學歷者得以相關學術著作替代）。</li>
+        <li>碩士論文 (國外學歷者得以相關學術著作替代)。</li>
         <li>研究計畫，不超過 5,000 字。</li>
         <li>自傳。</li>
         <li>其他已發表的學術論著。</li>
@@ -449,7 +467,7 @@
         <p>符合以下條件之一者皆可報考。</p>
       </div>
       <ol class="req-list">
-        <li>持有國內公立或已立案私立大學研究所（碩士班）主修經濟或相關領域之碩士學位者。</li>
+        <li>持有國內公立或已立案私立大學研究所 (碩士班) 主修經濟或相關領域之碩士學位者。</li>
         <li>具同等學力且符合系所規定，經審查通過者。</li>
       </ol>
     </section>

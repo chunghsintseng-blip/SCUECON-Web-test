@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>東吳經濟學系｜博士班修課須知範例</title>
+  <title>東吳經濟學系｜博士班課程資訊範例</title>
   <style>
     :root {
       --ink: #18202f;
@@ -183,6 +183,17 @@
       text-decoration: none;
       font-size: 13px;
       font-weight: 900;
+      transition: border-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+    }
+
+    .quick-links a:hover,
+    .quick-links a:focus-visible,
+    .subnav a:not([aria-current="page"]):hover,
+    .subnav a:not([aria-current="page"]):focus-visible {
+      transform: translateY(-2px);
+      border-color: rgba(28, 59, 127, .45);
+      box-shadow: 0 14px 30px rgba(24, 32, 47, .08);
+      outline: none;
     }
 
     .subnav {
@@ -256,6 +267,220 @@
       font-size: 14px;
     }
 
+    .required-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .required-item {
+      border: 1px solid var(--line);
+      background: #fbfcfe;
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      min-height: 60px;
+    }
+
+    .required-item strong {
+      color: var(--brand-dark);
+      font-size: 15px;
+      letter-spacing: 0;
+    }
+
+    .required-item span {
+      color: var(--brand);
+      font-size: 13px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .core-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .core-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      padding: 18px;
+    }
+
+    .core-card h4 {
+      margin: 0 0 10px;
+      color: var(--brand-dark);
+      font-size: 17px;
+      letter-spacing: 0;
+    }
+
+    .core-card ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 6px;
+    }
+
+    .core-card li {
+      padding: 0 0 6px;
+      border-bottom: 1px solid #edf0f5;
+      font-size: 14px;
+      color: var(--ink);
+    }
+
+    .core-card li:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .group-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      align-items: start;
+    }
+
+    .group-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      overflow: hidden;
+      box-shadow: 0 10px 24px rgba(24, 32, 47, .05);
+    }
+
+    .group-card .group-head {
+      padding: 18px;
+      color: #fff;
+    }
+
+    .group-card.industry .group-head { background: var(--green); }
+    .group-card.finance .group-head { background: var(--gold); }
+    .group-card.method .group-head { background: var(--teal); }
+
+    .group-card .group-head h3 {
+      margin: 0;
+      font-size: 21px;
+      letter-spacing: 0;
+      color: #fff;
+    }
+
+    .group-card .group-head p {
+      margin: 6px 0 0;
+      color: rgba(255, 255, 255, .86);
+      font-size: 13px;
+    }
+
+    .group-card .group-body {
+      padding: 18px;
+    }
+
+    .course-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 8px;
+    }
+
+    .course-list li {
+      padding: 0 0 8px;
+      border-bottom: 1px solid #edf0f5;
+      font-size: 14px;
+      color: var(--ink);
+    }
+
+    .course-list li:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .flow-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .flow-step {
+      position: relative;
+      border: 1px solid var(--line);
+      background: #fbfcfe;
+      padding: 18px;
+      min-height: 110px;
+    }
+
+    .flow-step::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -10px;
+      width: 10px;
+      border-top: 2px solid #c6cedb;
+    }
+
+    .flow-step:last-child::after {
+      display: none;
+    }
+
+    .flow-step .kicker {
+      color: var(--brand);
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .flow-step strong {
+      display: block;
+      margin-top: 5px;
+      font-size: 17px;
+      color: var(--brand-dark);
+    }
+
+    .flow-step span {
+      display: block;
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .summary-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      padding: 20px;
+      min-height: 130px;
+    }
+
+    .summary-card strong {
+      display: block;
+      color: var(--brand);
+      font-size: 36px;
+      line-height: 1;
+    }
+
+    .summary-card h4 {
+      margin: 10px 0 4px;
+      font-size: 17px;
+      letter-spacing: 0;
+    }
+
+    .summary-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .note {
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
     .link-list {
       margin-top: 16px;
       display: grid;
@@ -275,6 +500,7 @@
       text-decoration: none;
       font-size: 15px;
       font-weight: 900;
+      transition: border-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
     }
 
     .link-list a::after {
@@ -284,11 +510,29 @@
       font-weight: 900;
     }
 
+    .link-list a:hover,
+    .link-list a:focus-visible {
+      transform: translateY(-2px);
+      border-color: rgba(28, 59, 127, .45);
+      box-shadow: 0 14px 30px rgba(24, 32, 47, .08);
+      outline: none;
+    }
+
     @media (max-width: 960px) {
       .notice,
-      .guide-grid {
+      .guide-grid,
+      .group-grid,
+      .summary-grid {
         grid-template-columns: 1fr;
       }
+
+      .required-grid,
+      .core-grid,
+      .flow-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .flow-step::after { display: none; }
 
       .quick-links {
         justify-content: flex-start;
@@ -317,8 +561,17 @@
 
       .notice,
       .section,
-      .guide-card {
+      .guide-card,
+      .summary-card,
+      .core-card,
+      .flow-step {
         padding: 18px;
+      }
+
+      .required-grid,
+      .core-grid,
+      .flow-grid {
+        grid-template-columns: 1fr;
       }
 
       .section-title {
@@ -345,9 +598,9 @@
 
   <section class="hero">
     <div class="hero-inner">
-      <div class="crumb">首頁 / 課程資訊 / 博士班 / 博士班修課須知</div>
-      <h1>博士班修課須知</h1>
-      <p>整理博士班必選修科目表、課程地圖、修課說明、論文專題、學位考試與學術倫理相關入口。</p>
+      <div class="crumb">首頁 / 課程資訊 / 博士班 / 博士班課程資訊</div>
+      <h1>博士班課程資訊</h1>
+      <p>整理博士班核心課程、選修三大課群、修業流程與畢業學分要求，並提供必選修科目表、論文與學位考試等常用入口。</p>
     </div>
   </section>
 
@@ -355,7 +608,7 @@
     <nav class="subnav" aria-label="碩博士班課程分頁">
       <a href="course-info-demo.html">課程資訊總覽</a>
       <a href="master-course-guide-demo.html">碩士班課程資訊</a>
-      <a href="doctoral-course-guide-demo.html" aria-current="page">博士班修課須知</a>
+      <a href="doctoral-course-guide-demo.html" aria-current="page">博士班課程資訊</a>
     </nav>
 
     <section class="notice">
@@ -363,18 +616,218 @@
         <h2>博士班修課資料總覽</h2>
         <p>依修課規劃、課程地圖、論文專題與學位考試等使用情境分類。</p>
       </div>
-      <div class="quick-links" aria-label="博士班修課須知快速入口">
+      <div class="quick-links" aria-label="博士班課程資訊快速入口">
+        <a href="#required-courses">必修課程</a>
+        <a href="#core">核心課程</a>
+        <a href="#groups">選修課群</a>
+        <a href="#process">修業流程</a>
+        <a href="#graduation">畢業要求</a>
         <a href="#curriculum">必選修科目表</a>
         <a href="#planning">修課資料</a>
-        <a href="#thesis">論文專題</a>
-        <a href="#degree">學位考試</a>
+        <a href="#thesis">論文相關</a>
+        <a href="#degree">資格考核</a>
       </div>
+    </section>
+
+    <section class="section" id="required-courses">
+      <div class="section-title">
+        <div>
+          <h2>必修課程</h2>
+          <p>系訂必修，含專題討論與博士論文。</p>
+        </div>
+      </div>
+      <div class="required-grid">
+        <article class="required-item">
+          <strong>核心課程</strong>
+          <span>四領域選二</span>
+        </article>
+        <article class="required-item">
+          <strong>專題討論 (一)</strong>
+          <span>1 年級 ・ 1 學分</span>
+        </article>
+        <article class="required-item">
+          <strong>專題討論 (二)</strong>
+          <span>2 年級 ・ 1 學分</span>
+        </article>
+        <article class="required-item">
+          <strong>博士論文</strong>
+          <span>—</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="core">
+      <div class="section-title">
+        <div>
+          <h2>核心課程</h2>
+          <p>個體、總體、計量、財精四領域，學生須選修其中兩個領域之核心課程。</p>
+        </div>
+      </div>
+      <div class="core-grid">
+        <article class="core-card">
+          <h4>個體領域</h4>
+          <ul>
+            <li>個體經濟理論 (A)</li>
+            <li>個體經濟理論 (B)</li>
+          </ul>
+        </article>
+        <article class="core-card">
+          <h4>總體領域</h4>
+          <ul>
+            <li>總體經濟理論 (A)</li>
+            <li>總體經濟理論 (B)</li>
+          </ul>
+        </article>
+        <article class="core-card">
+          <h4>計量領域</h4>
+          <ul>
+            <li>計量經濟學理論與應用 (A)</li>
+            <li>計量經濟學理論與應用 (B)</li>
+          </ul>
+        </article>
+        <article class="core-card">
+          <h4>財精領域</h4>
+          <ul>
+            <li>保險專題研究</li>
+            <li>財務數量研究</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="groups">
+      <div class="section-title">
+        <div>
+          <h2>選修三大課群</h2>
+          <p>產業與貿易、金融與財務、分析方法三大課群，依研究方向搭配選修。</p>
+        </div>
+      </div>
+      <div class="group-grid">
+        <article class="group-card industry">
+          <div class="group-head">
+            <h3>產業與貿易</h3>
+            <p>產業組織、貿易與區域經濟議題</p>
+          </div>
+          <div class="group-body">
+            <ul class="course-list">
+              <li>國際貿易</li>
+              <li>區域經濟學 (一)</li>
+              <li>區域經濟學 (二)</li>
+              <li>產業經濟學</li>
+              <li>績效評估：生產力與效率分析</li>
+              <li>網路理論專題</li>
+              <li>產業經濟學專題研究</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="group-card finance">
+          <div class="group-head">
+            <h3>金融與財務</h3>
+            <p>貨幣、投資與量化財務研究</p>
+          </div>
+          <div class="group-body">
+            <ul class="course-list">
+              <li>貨幣經濟學</li>
+              <li>投資學</li>
+              <li>群體智慧在財務學上的應用</li>
+              <li>經濟成長</li>
+              <li>國際金融</li>
+              <li>財務軟體應用</li>
+              <li>計算智慧與網路金融科技</li>
+              <li>財務經濟學</li>
+              <li>財務經濟學專題研究</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="group-card method">
+          <div class="group-head">
+            <h3>分析方法</h3>
+            <p>計量、數理與方法論訓練</p>
+          </div>
+          <div class="group-body">
+            <ul class="course-list">
+              <li>專題討論 (一)</li>
+              <li>專題討論 (二)</li>
+              <li>數理經濟學</li>
+              <li>計量經濟學專題</li>
+              <li>經濟學方法論</li>
+              <li>公共經濟學專題</li>
+              <li>財務時間序列</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="process">
+      <div class="section-title">
+        <div>
+          <h2>修業流程</h2>
+          <p>從資格考試到博士論文發表的學位進程。</p>
+        </div>
+      </div>
+      <div class="flow-grid">
+        <div class="flow-step">
+          <div class="kicker">Step 1</div>
+          <strong>資格考試初審</strong>
+          <span>筆試與論文審查。</span>
+        </div>
+        <div class="flow-step">
+          <div class="kicker">Step 2</div>
+          <strong>資格考試複審</strong>
+          <span>博士論文大綱口試。</span>
+        </div>
+        <div class="flow-step">
+          <div class="kicker">Step 3</div>
+          <strong>博士學位候選人資格</strong>
+          <span>取得候選人資格後進入論文撰寫階段。</span>
+        </div>
+        <div class="flow-step">
+          <div class="kicker">Step 4</div>
+          <strong>博士論文發表會</strong>
+          <span>論文公開發表，向系所同儕報告研究成果。</span>
+        </div>
+        <div class="flow-step">
+          <div class="kicker">Step 5</div>
+          <strong>博士論文口試</strong>
+          <span>論文口試與學位考試，通過後取得博士學位。</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="graduation">
+      <div class="section-title">
+        <div>
+          <h2>畢業學分要求</h2>
+          <p>本系博士班應修最低畢業學分為 35 學分。</p>
+        </div>
+      </div>
+      <div class="summary-grid">
+        <article class="summary-card">
+          <strong>35</strong>
+          <h4>畢業總學分</h4>
+          <p>含核心、選修與必修論文相關學分。</p>
+        </article>
+        <article class="summary-card">
+          <strong>2</strong>
+          <h4>核心領域</h4>
+          <p>須於四領域中選修兩領域之核心課程。</p>
+        </article>
+        <article class="summary-card">
+          <strong>3</strong>
+          <h4>選修課群</h4>
+          <p>產業與貿易、金融與財務、分析方法三大課群。</p>
+        </article>
+      </div>
+      <p class="note">資料來源：東吳經濟學系博士班課程地圖。</p>
     </section>
 
     <section class="section">
       <div class="section-title">
         <div>
-          <h2>常用文件入口</h2>
+          <h2>常用文件連結</h2>
         </div>
       </div>
       <div class="guide-grid">
@@ -404,21 +857,26 @@
         </article>
 
         <article class="guide-card gold" id="thesis">
-          <h3>論文專題</h3>
-          <p>論文口試、修改完成同意書、撰寫格式與相關表單。</p>
+          <h3>論文相關</h3>
+          <p>論文口試須知、撰寫格式、博士班封面與書脊格式。</p>
           <div class="link-list">
-            <a href="https://web-ch.scu.edu.tw/econ/web_page/14801" target="_blank" rel="noopener noreferrer">經濟學系相關表單</a>
             <a href="https://drive.google.com/file/d/1UybCfSguIjfuUx6_NRwthJ0JUI7dfuX_/view?usp=drive_link" target="_blank" rel="noopener noreferrer">碩(碩專)博士班論文口試須知</a>
-            <a href="https://docs.google.com/document/d/1XVfOvjQ6E5MutGQj6gE-ZU7PP_udo-Fl/edit?usp=sharing&amp;ouid=117767920890804439811&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener noreferrer">論文修改完成同意書</a>
             <a href="http://www.scu.edu.tw/econ/class/8/all-8.pdf" target="_blank" rel="noopener noreferrer">論文撰寫參考格式</a>
+            <a href="https://docs.google.com/document/d/1ILID89p_kJgAanVL8xupAupA25JA7b6f/edit?usp=drive_link&amp;ouid=117767920890804439811&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener noreferrer">博士班論文封面格式</a>
+            <a href="https://docs.google.com/document/d/1jWIDRBS6M333VLpuLJvFaZpogKEtxhjn/edit?usp=drive_link&amp;ouid=117767920890804439811&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener noreferrer">博士班論文書脊格式</a>
+            <a href="https://docs.google.com/document/d/1XVfOvjQ6E5MutGQj6gE-ZU7PP_udo-Fl/edit?usp=sharing&amp;ouid=117767920890804439811&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener noreferrer">論文修改完成同意書</a>
           </div>
         </article>
 
         <article class="guide-card green" id="degree">
-          <h3>學位考試與學術倫理</h3>
-          <p>學位考試表單與臺灣學術倫理教育資源中心。</p>
+          <h3>資格考核與學位考試</h3>
+          <p>博士班資格考核、學位考試表單與相關規定。</p>
           <div class="link-list">
+            <a href="https://docs.google.com/document/d/1VCjNlF66Qa-v-RTiLvd7KbzbZ2DLcv8U/edit?usp=drive_link&amp;ouid=117767920890804439811&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener noreferrer">博士班資格考核筆試申請單</a>
+            <a href="https://docs.google.com/document/d/1n_4pWfk2dkUwKM2cwY1rwKnmM-vQpSHZ/edit?usp=drive_link&amp;ouid=117767920890804439811&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener noreferrer">博士班資格考核論文大綱申請表</a>
+            <a href="https://drive.google.com/file/d/16QK_aqgf9UgFxoHs5b_f-z1PfCNAe_xv/view?usp=drive_link" target="_blank" rel="noopener noreferrer">逕行修讀博士學位相關規定</a>
             <a href="https://web-ch.scu.edu.tw/regcurr/file/2379" target="_blank" rel="noopener noreferrer">學位考試表單</a>
+            <a href="https://web-ch.scu.edu.tw/econ/web_page/14801" target="_blank" rel="noopener noreferrer">經濟學系相關表單</a>
             <a href="https://ethics.moe.edu.tw/" target="_blank" rel="noopener noreferrer">臺灣學術倫理教育資源中心</a>
           </div>
         </article>

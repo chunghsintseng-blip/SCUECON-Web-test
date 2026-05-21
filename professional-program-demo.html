@@ -166,6 +166,15 @@
       text-decoration: none;
       font-size: 13px;
       font-weight: 900;
+      transition: border-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+    }
+
+    .subnav a:not([aria-current="page"]):hover,
+    .subnav a:not([aria-current="page"]):focus-visible {
+      transform: translateY(-2px);
+      border-color: rgba(28, 59, 127, .45);
+      box-shadow: 0 14px 30px rgba(24, 32, 47, .08);
+      outline: none;
     }
 
     .subnav a[aria-current="page"] {
@@ -255,9 +264,6 @@
     }
 
     .program-meta {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
       margin-top: 18px;
     }
 
@@ -275,11 +281,21 @@
     }
 
     .metric strong {
-      display: block;
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 8px;
       margin-top: 5px;
       color: var(--brand);
       font-size: 20px;
       line-height: 1.3;
+    }
+
+    .metric strong .credits {
+      color: var(--brand);
+      font-size: 14px;
+      font-weight: 900;
+      white-space: nowrap;
     }
 
     .detail-list {
@@ -330,12 +346,6 @@
       color: #344054;
       font-size: 13px;
       line-height: 1.55;
-    }
-
-    .metric-note {
-      margin: 12px 0 0;
-      color: var(--muted);
-      font-size: 14px;
     }
 
     .process {
@@ -414,6 +424,15 @@
       background: #f9f2e7;
       border-color: #ead5b3;
       color: #6f4c18;
+      transition: border-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+    }
+
+    .resource-link:hover,
+    .resource-link:focus-visible {
+      transform: translateY(-2px);
+      border-color: rgba(28, 59, 127, .45);
+      box-shadow: 0 14px 30px rgba(24, 32, 47, .08);
+      outline: none;
     }
 
     .flow-card {
@@ -482,8 +501,88 @@
       font-size: 14px;
     }
 
+    .program-courses-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      align-items: start;
+    }
+
+    .program-courses-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      padding: 22px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .program-courses-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto;
+      height: 5px;
+      background: var(--blue);
+    }
+
+    .program-courses-card.data::before {
+      background: var(--teal);
+    }
+
+    .program-courses-card h3 {
+      margin: 0;
+      font-size: 22px;
+      letter-spacing: 0;
+    }
+
+    .course-block {
+      margin-top: 18px;
+    }
+
+    .course-block h4 {
+      margin: 0 0 8px;
+      color: var(--brand-dark);
+      font-size: 16px;
+      letter-spacing: 0;
+    }
+
+    .course-block h5 {
+      margin: 12px 0 6px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+
+    .course-block ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 6px;
+    }
+
+    .course-block li {
+      padding: 6px 10px;
+      border: 1px solid #e6ebf3;
+      background: #fbfcfe;
+      font-size: 14px;
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .course-block li small {
+      color: var(--muted);
+      font-size: 12px;
+      white-space: nowrap;
+      flex: 0 0 auto;
+    }
+
     @media (max-width: 960px) {
       .program-grid,
+      .program-courses-grid,
       .rule-grid,
       .notice {
         grid-template-columns: 1fr;
@@ -588,76 +687,11 @@
       <a href="undergrad-course-guide-demo.html">大學部修課須知</a>
     </nav>
 
-    <section class="notice">
-      <div>
-        <h2>專業學程證明</h2>
-        <p>大學部課程各專業學程符合規定條件，即核發該專業學程證明。</p>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="section-title">
-        <div>
-          <h2>經濟學系學程</h2>
-          <p>以 18 學分選修架構搭配學習成果，讓專業能力能被清楚呈現。</p>
-        </div>
-      </div>
-      <div class="program-grid">
-        <article class="program finance">
-          <h3>財務金融學程</h3>
-          <p>適合想加強投資、金融市場與財務管理能力，並銜接金融相關職涯的學生。</p>
-          <div class="program-meta">
-            <div class="metric">
-              <span>學程必修</span>
-              <strong>投資學 3 學分</strong>
-            </div>
-            <div class="metric">
-              <span>學程選修</span>
-              <strong>15 學分</strong>
-            </div>
-          </div>
-          <ul class="detail-list">
-            <li>修滿財務金融領域課程要求。</li>
-            <li>完成得獎或通過模擬競賽，或取得 2 張財務金融相關證照。</li>
-          </ul>
-        </article>
-
-        <article class="program data">
-          <h3>資料分析學程</h3>
-          <p>適合想建立資料處理、程式語言、計量分析與競賽成果的學生。</p>
-          <div class="program-meta">
-            <div class="metric">
-              <span>學程必修</span>
-              <div class="metric-course-groups">
-                <div class="metric-course-group">
-                  <b>計量課程</b>
-                  <small>計量經濟學／大數據計量經濟學</small>
-                </div>
-                <div class="metric-course-group">
-                  <b>數據分析軟體</b>
-                  <small>Python 基礎程式與經濟應用／R 基礎程式與經濟應用</small>
-                </div>
-              </div>
-              <p class="metric-note">各分類課程二選一。</p>
-            </div>
-            <div class="metric">
-              <span>學程選修</span>
-              <strong>12 學分</strong>
-            </div>
-          </div>
-          <ul class="detail-list">
-            <li>修滿資料分析領域課程要求。</li>
-            <li>完成資料分析競賽、校外競賽得獎或取得認可之資料分析相關證照。</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
     <section class="section">
       <div class="section-title">
         <div>
           <h2>取得學程證明流程</h2>
-          <p>修課與學習成果達標後，備妥資料向系辦公室提出申請，經核可後頒予學程證明。</p>
+          <p>符合學程規定的修課與學習成果後，向系辦公室提出申請，經審查通過即頒予學程證明。</p>
         </div>
       </div>
       <div class="flow-card" aria-label="取得學程證明流程圖">
@@ -694,6 +728,174 @@
     <section class="section">
       <div class="section-title">
         <div>
+          <h2>經濟學系學程</h2>
+          <p>以 18 學分選修架構搭配學習成果，讓專業能力能被清楚呈現。</p>
+        </div>
+      </div>
+      <div class="program-grid">
+        <article class="program finance">
+          <h3>財務金融學程</h3>
+          <p>適合想加強投資、金融市場與財務管理能力，並銜接金融相關職涯的學生。</p>
+          <div class="program-meta">
+            <div class="metric">
+              <span>學程必修</span>
+              <strong>投資學<span class="credits">3 學分</span></strong>
+            </div>
+          </div>
+          <ul class="detail-list">
+            <li>含學程選修課程，合計修讀 18 學分。</li>
+            <li>完成得獎或通過模擬競賽，或取得 2 張財務金融相關證照。</li>
+          </ul>
+        </article>
+
+        <article class="program data">
+          <h3>資料分析學程</h3>
+          <p>適合想建立資料處理、程式語言、計量分析與競賽成果的學生。</p>
+          <div class="program-meta">
+            <div class="metric">
+              <span>學程必修</span>
+              <div class="metric-course-groups">
+                <div class="metric-course-group">
+                  <b>計量課程</b>
+                  <small>計量經濟學／大數據計量經濟學 (二選一)</small>
+                  <small>※計量經濟學為 6 學分課程；大數據計量經濟學為碩士班選修課程</small>
+                </div>
+                <div class="metric-course-group">
+                  <b>數據分析軟體</b>
+                  <small>Python 基礎程式與經濟應用／R 基礎程式與經濟應用 (二選一)</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ul class="detail-list">
+            <li>含學程選修課程，合計修讀 18 學分。</li>
+            <li>完成資料分析競賽、校外競賽得獎或取得認可之資料分析相關證照。</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="courses">
+      <div class="section-title">
+        <div>
+          <h2>學程課程列表</h2>
+          <p>依學程辦法整理之必修與選修課程，實際開課與認定以系上公告為準。</p>
+        </div>
+      </div>
+      <div class="program-courses-grid">
+        <article class="program-courses-card finance">
+          <h3>財務金融學程</h3>
+
+          <div class="course-block">
+            <h4>學程必修</h4>
+            <ul>
+              <li>投資學</li>
+              <li>財務經濟學 (學士班)<small>113 學年度前 (含) 修讀者得認列為必修</small></li>
+            </ul>
+          </div>
+
+          <div class="course-block">
+            <h4>學程選修</h4>
+            <h5>學士班課程</h5>
+            <ul>
+              <li>股票投資分析與實務<small>原證券投資分析與實務，113 學年度起更名</small></li>
+              <li>債券投資分析與實務</li>
+              <li>期貨與選擇權</li>
+              <li>財務經濟學 (學士班)<small>114 學年度後為選修</small></li>
+              <li>理財分析與實務</li>
+              <li>金融機構與市場</li>
+              <li>財務報表分析</li>
+              <li>金融證照研習</li>
+              <li>校外實習 (與財務金融相關)</li>
+              <li>貨幣金融專題討論 (A) 或 (B)</li>
+              <li>貨幣金融專題討論</li>
+              <li>貨幣理論與政策</li>
+              <li>財務金融與 R 語言</li>
+              <li>基礎金融商品訂價</li>
+              <li>選擇權定價概論</li>
+              <li>量化交易</li>
+              <li>新金融商品</li>
+              <li>期貨與選擇權商品實務與應用</li>
+              <li>財經新聞製作與分析</li>
+              <li>行為經濟學</li>
+              <li>金融科技概論</li>
+              <li>人工智慧與金融科技</li>
+              <li>財務風險管理 (學士班)</li>
+              <li>時間序列分析</li>
+              <li>財務管理</li>
+            </ul>
+            <h5>碩士班課程</h5>
+            <ul>
+              <li>投資學專題</li>
+              <li>投資策略程式設計 (全英語遠距)</li>
+              <li>財務數量研究</li>
+              <li>比特幣經濟學</li>
+              <li>期貨與選擇權</li>
+              <li>財務風險管理</li>
+              <li>財務經濟學</li>
+            </ul>
+            <h5>商學院第二專長</h5>
+            <ul>
+              <li>資本市場實務與操作</li>
+              <li>加密貨幣金融</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="program-courses-card data">
+          <h3>資料分析學程</h3>
+
+          <div class="course-block">
+            <h4>學程必修</h4>
+            <h5>計量課程 (二選一)</h5>
+            <ul>
+              <li>計量經濟學</li>
+              <li>大數據計量經濟學<small>碩士班選修</small></li>
+            </ul>
+            <h5>程式語言基礎 (二選一)</h5>
+            <ul>
+              <li>Python 基礎程式與經濟應用</li>
+              <li>R 基礎程式與經濟應用</li>
+            </ul>
+          </div>
+
+          <div class="course-block">
+            <h4>學程選修</h4>
+            <h5>基礎課程</h5>
+            <ul>
+              <li>Excel VBA 實用案例分析</li>
+              <li>R 語言程式的經濟應用與分析</li>
+              <li>數量經濟學導論與 R (全英語)</li>
+            </ul>
+            <h5>進階課程</h5>
+            <ul>
+              <li>財務金融與 R 語言</li>
+              <li>機器學習與 Python</li>
+              <li>校外實習 (與資料分析相關)</li>
+              <li>量化交易</li>
+              <li>數理統計學</li>
+              <li>財經資料庫應用分析 (A)</li>
+              <li>財經資料庫應用分析 (B)</li>
+              <li>財務風險管理</li>
+              <li>時間序列分析</li>
+              <li>人工智慧與金融科技</li>
+              <li>機器學習導論</li>
+              <li>網站流量分析實務</li>
+              <li>新式資料分析方法 - R 程式之應用</li>
+            </ul>
+            <h5>碩士班課程</h5>
+            <ul>
+              <li>應用計量經濟學 (一)</li>
+              <li>應用計量經濟學 (二)</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">
+        <div>
           <h2>注意事項</h2>
           <p>實際課程與認定方式仍以學系公告為準。</p>
         </div>
@@ -708,8 +910,8 @@
           <p>需與資料分析相關的校外實習才可計入學分，由本系主任與資料分析小組召集人認定。</p>
         </div>
         <div class="rule">
-          <strong>上修碩士班課程</strong>
-          <p>部分學程課程為碩士班課程，可列入大學部畢業學分，相關細節請詢問系辦公室秘書。</p>
+          <strong>先修碩士班課程</strong>
+          <p>部分學程課程為碩士班課程，可列入大學部畢業學分，相關細節請詢問系辦公室秘書。列入大學部畢業學分之課程不得再用於抵免碩士班學分。</p>
         </div>
         <div class="rule">
           <strong>學分不得重複認抵</strong>
@@ -721,11 +923,11 @@
     <section class="section">
       <div class="section-title">
         <div>
-          <h2>附件入口</h2>
-          <p>申請前請以附件與學系最新公告確認完整規定。</p>
+          <h2>相關文件連結</h2>
+          <p>申請前請以相關文件與學系最新公告確認完整規定。</p>
         </div>
       </div>
-      <div class="resources" aria-label="專業學程附件">
+      <div class="resources" aria-label="專業學程相關文件">
         <a class="resource-link" href="https://drive.google.com/file/d/1-ZkE5FH1Povc3n2GAguewuzjeQwY_MDK/view?usp=drive_link" target="_blank" rel="noopener noreferrer">財務金融學程全攻略</a>
         <a class="resource-link" href="https://docs.google.com/document/d/1U9H86SAJRvyiD7tW6S0Tq7WuX36LqA94/edit?ouid=117767920890804439811&rtpof=true&sd=true&usp=drive_link" target="_blank" rel="noopener noreferrer">財務金融學程申請表</a>
         <a class="resource-link" href="https://drive.google.com/file/d/1tEqBjXwPhcIE_T1MBVww98OMDBQs1ShO/view?usp=drive_link" target="_blank" rel="noopener noreferrer">財務金融學程辦法</a>

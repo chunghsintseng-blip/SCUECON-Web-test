@@ -183,6 +183,17 @@
       text-decoration: none;
       font-size: 13px;
       font-weight: 900;
+      transition: border-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+    }
+
+    .quick-links a:hover,
+    .quick-links a:focus-visible,
+    .subnav a:not([aria-current="page"]):hover,
+    .subnav a:not([aria-current="page"]):focus-visible {
+      transform: translateY(-2px);
+      border-color: rgba(28, 59, 127, .45);
+      box-shadow: 0 14px 30px rgba(24, 32, 47, .08);
+      outline: none;
     }
 
     .subnav {
@@ -401,6 +412,7 @@
       background: #fbfcfe;
       color: var(--brand-dark);
       text-decoration: none;
+      transition: border-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
       font-size: 15px;
       font-weight: 900;
     }
@@ -410,6 +422,14 @@
       flex: 0 0 auto;
       color: var(--gold);
       font-weight: 900;
+    }
+
+    .link-list a:hover,
+    .link-list a:focus-visible {
+      transform: translateY(-2px);
+      border-color: rgba(28, 59, 127, .45);
+      box-shadow: 0 14px 30px rgba(24, 32, 47, .08);
+      outline: none;
     }
 
     @media (max-width: 960px) {
@@ -494,7 +514,7 @@
     <nav class="subnav" aria-label="碩博士班課程分頁">
       <a href="course-info-demo.html">課程資訊總覽</a>
       <a href="master-course-guide-demo.html" aria-current="page">碩士班課程資訊</a>
-      <a href="doctoral-course-guide-demo.html">博士班修課須知</a>
+      <a href="doctoral-course-guide-demo.html">博士班課程資訊</a>
     </nav>
 
     <section class="notice">
@@ -508,7 +528,7 @@
         <a href="#graduation">畢業要求</a>
         <a href="#curriculum">必選修科目表</a>
         <a href="#planning">修課資料</a>
-        <a href="#thesis">論文專區</a>
+        <a href="#thesis">論文相關</a>
         <a href="#exam">資格考核</a>
       </div>
     </section>
@@ -516,7 +536,7 @@
     <section class="section" id="required-courses">
       <div class="section-title">
         <div>
-          <h2>必修課程（12 學分）</h2>
+          <h2>必修課程 (12 學分)</h2>
           <p>系訂必修，含論文寫作、專題討論與論文。</p>
         </div>
       </div>
@@ -538,8 +558,8 @@
           <span>1 學分</span>
         </article>
         <article class="required-item">
-          <strong>專題討論（一）、（二）</strong>
-          <span>2 學分</span>
+          <strong>專題討論 (一)、(二)</strong>
+          <span>各 1 學分</span>
         </article>
         <article class="required-item">
           <strong>論文</strong>
@@ -551,7 +571,7 @@
     <section class="section" id="groups">
       <div class="section-title">
         <div>
-          <h2>選修三大課群（20 學分）</h2>
+          <h2>選修三大課群 (20 學分)</h2>
           <p>須至少修讀兩課群，每課群至少 4 學分；同一科目不得重複計入不同課群。</p>
         </div>
       </div>
@@ -565,13 +585,13 @@
             <ul class="course-list">
               <li>經濟成長</li>
               <li>貨幣經濟學</li>
-              <li>貨幣金融專題討論（A）／（B）</li>
+              <li>貨幣金融專題討論 (A)／(B)</li>
               <li>臺灣經濟發展與成長</li>
               <li>總體勞動經濟學</li>
               <li>經濟發展</li>
               <li>全球化、經濟整合與國際貿易</li>
               <li>反托拉斯經濟學及案例分析</li>
-              <li>公共政策與財經專題（一）／（二）</li>
+              <li>公共政策與財經專題 (一)／(二)</li>
               <li>區域經濟學</li>
               <li>產業經濟學</li>
               <li>管理經濟專題</li>
@@ -662,7 +682,7 @@
     <section class="section">
       <div class="section-title">
         <div>
-          <h2>常用文件入口</h2>
+          <h2>常用文件連結</h2>
         </div>
       </div>
       <div class="guide-grid">
@@ -692,14 +712,16 @@
         </article>
 
         <article class="guide-card gold" id="thesis">
-          <h3>論文專區</h3>
-          <p>論文口試、修改完成同意書、撰寫格式與學術倫理資源。</p>
+          <h3>論文相關</h3>
+          <p>論文口試須知、撰寫格式與碩士班、碩專班封面/書脊格式。</p>
           <div class="link-list">
-            <a href="https://web-ch.scu.edu.tw/econ/web_page/14800" target="_blank" rel="noopener noreferrer">經濟學系相關表單</a>
             <a href="https://drive.google.com/file/d/1UybCfSguIjfuUx6_NRwthJ0JUI7dfuX_/view?usp=drive_link" target="_blank" rel="noopener noreferrer">碩(碩專)博士班論文口試須知</a>
-            <a href="https://docs.google.com/document/d/1XVfOvjQ6E5MutGQj6gE-ZU7PP_udo-Fl/edit?usp=drive_link" target="_blank" rel="noopener noreferrer">論文修改完成同意書</a>
             <a href="http://www.scu.edu.tw/econ/class/8/all-8.pdf" target="_blank" rel="noopener noreferrer">論文撰寫參考格式</a>
-            <a href="https://ethics.moe.edu.tw/" target="_blank" rel="noopener noreferrer">臺灣學術倫理教育資源中心</a>
+            <a href="https://docs.google.com/document/d/1QBT8dvZMSu7sgLr2C0xIl65ChRfx6BWT/edit?usp=drive_link&amp;ouid=117767920890804439811&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener noreferrer">碩士班論文封面格式</a>
+            <a href="https://docs.google.com/document/d/1J51HHJfpOiJMbJw-tjXzVVsquYjjg5DY/edit?usp=drive_link&amp;ouid=117767920890804439811&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener noreferrer">碩士班論文書脊格式</a>
+            <a href="https://docs.google.com/document/d/15qJo2hUUQXdn776TAx0CFCMnY-GXmsnz/edit?usp=drive_link&amp;ouid=117767920890804439811&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener noreferrer">碩專班論文封面格式</a>
+            <a href="https://docs.google.com/document/d/10AQLlU6Tlg1MD55SIUzFDMl07RSuinq2/edit?usp=drive_link&amp;ouid=117767920890804439811&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener noreferrer">碩專班論文書脊格式</a>
+            <a href="https://docs.google.com/document/d/1XVfOvjQ6E5MutGQj6gE-ZU7PP_udo-Fl/edit?usp=drive_link" target="_blank" rel="noopener noreferrer">論文修改完成同意書</a>
           </div>
         </article>
 
@@ -710,6 +732,8 @@
             <a href="https://docs.google.com/document/d/1DrpQOsDdcw4P6jz9877aMtcel10CmIYV/edit?usp=drive_link" target="_blank" rel="noopener noreferrer">碩士/碩專班資格考核申請同意書</a>
             <a href="https://docs.google.com/document/d/1cbzeOZs2engOUj4yr9J5jPsiWhGEvSQq/edit?usp=drive_link&amp;ouid=117767920890804439811&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener noreferrer">碩士碩專資格考核方式暨審查委員推薦表</a>
             <a href="https://web-ch.scu.edu.tw/regcurr/file/2379" target="_blank" rel="noopener noreferrer">學位考試表單</a>
+            <a href="https://web-ch.scu.edu.tw/econ/web_page/14800" target="_blank" rel="noopener noreferrer">經濟學系相關表單</a>
+            <a href="https://ethics.moe.edu.tw/" target="_blank" rel="noopener noreferrer">臺灣學術倫理教育資源中心</a>
           </div>
         </article>
       </div>
